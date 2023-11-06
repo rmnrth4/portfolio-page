@@ -32,6 +32,7 @@
         </div>
       </div>
     </div> 
+
     <!-- ------------------------about--------------------- -->
     <div id="about">
       <div class="container">
@@ -100,6 +101,7 @@
         </div>
       </div>
     </div>
+
     <!-- -----------------services--------------------- -->
     <div id="services">
       <div class="container">
@@ -181,6 +183,7 @@
         <a href="#" class="btn">See more</a>
       </div>
     </div>
+
     <!-- ----------- contact -------------- -->
     <div id="contact">
       <div class="container">
@@ -200,16 +203,18 @@
             <a href="images/IMG_4625.JPG" download class="btn btn2">Download CV</a>
           </div>
           <div class="contact-right">
-            <form name="submit-to-google-sheet">
-              <input type="text" name="Name" placeholder="Your Name" required />
-              <input type="email" name="Email" placeholder="Your Email" />
+
+            <form onsubmit="sendEmail()"; reset(); return false;>
+              <input type="text" id="Name" placeholder="Your Name" required/>
+              <input type="email" id="Email" placeholder="Your Email" required/>
               <textarea
-                name="Message"
+                id="Message"
                 rows="6"
                 placeholder="Your Message"
               ></textarea>
               <button type="submit" class="btn btn2">Submit</button>
             </form>
+
             <span id="msg"></span>
           </div>
         </div>
@@ -218,6 +223,26 @@
         <p>Copyright © Roman Roth.<i class="fa-regular fa-heart"></i></p>
       </div>
     </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>function sendEmail(){
+      Email.send({
+          Host : "smtp.elasticemail.com",
+          Username : "romanroth44@gmail.com",
+          Password : "A42FA17408ECCCF188D4011D7B2A652E7BC0",
+          To : 'romanroth44@gmail.com',
+          From : "romanroth44@gmail.com",
+          Subject : "New Contact Form Submit - portfolio-page",
+          Body : "Name: " + document.getElementById("Name").value
+            + "<br> Email: " + document.getElementById("Email").value
+            + "<br> Message: " + document.getElementById("Message").value
+      }).then(
+        message => alert(message)
+      );
+    }
+    
+    </script>
+
     <script src="script.js"></script>
   </body>
 </html>
