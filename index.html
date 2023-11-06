@@ -10,6 +10,7 @@
       src="https://kit.fontawesome.com/6b1c268a23.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </head>
   <body>
     <div id="header">
@@ -204,7 +205,7 @@
           </div>
           <div class="contact-right">
 
-            <form onsubmit="sendEmail()"; reset(); return false;>
+            <form name="submit-to-mail"; onsubmit=sendEmail(); reset(); return false;>
               <input type="text" id="Name" placeholder="Your Name" required/>
               <input type="email" id="Email" placeholder="Your Email" required/>
               <textarea
@@ -223,26 +224,6 @@
         <p>Copyright © Roman Roth.<i class="fa-regular fa-heart"></i></p>
       </div>
     </div>
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>function sendEmail(){
-      Email.send({
-          Host : "smtp.elasticemail.com",
-          Username : "romanroth44@gmail.com",
-          Password : "A42FA17408ECCCF188D4011D7B2A652E7BC0",
-          To : 'romanroth44@gmail.com',
-          From : "romanroth44@gmail.com",
-          Subject : "New Contact Form Submit - portfolio-page",
-          Body : "Name: " + document.getElementById("Name").value
-            + "<br> Email: " + document.getElementById("Email").value
-            + "<br> Message: " + document.getElementById("Message").value
-      }).then(
-        message => alert(message)
-      );
-    }
-    
-    </script>
-
     <script src="script.js"></script>
   </body>
 </html>
