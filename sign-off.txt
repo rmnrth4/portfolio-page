@@ -4,3 +4,5 @@ Signed-off-by: Roman <rothr8@bfh.ch>
 Made with help of:
 https://youtu.be/0YFrGy_mzjY?si=uof9L7BJdNhP94Np
 https://www.youtube.com/watch?v=sGQSz22U8VM
+https://www.youtube.com/watch?v=znqUwx0b0HI ;video
+https://www.youtube.com/watch?v=SgmNxE9lWcY ;css animations for beginners
