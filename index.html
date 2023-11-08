@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/logo_rr.png">
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="styles.css" />
     <script
@@ -29,13 +30,13 @@
         </nav>
         <div class="header-text">
           <p>UI/UX Designer</p>
-          <h1>Hi, I'm <span>Roman</span><br />Roth from Switzerland</h1>
+          <h1>Hi, I'm <span>Roman</span><br />Roth from Switzerland and <br> I am a <span class="auto-type"></span></h1>
         </div>
       </div>
     </div> 
 
     <!-- ------------------------about--------------------- -->
-    <div id="about">
+    <div class="hidden" id="about">
       <div class="container">
         <div class="row">
           <div class="about-col-1">
@@ -101,7 +102,7 @@
     </div>
 
     <!-- -----------------services--------------------- -->
-    <div id="services">
+    <div class="hidden" id="services">
       <div class="container">
         <h1 class="sub-title">My Services</h1>
         <div class="services-list">
@@ -140,7 +141,7 @@
     </div>
 
     <!-- ------------- portfolio---------------- -->
-    <div id="portfolio">
+    <div class="hidden" id="portfolio">
       <div class="container">
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
@@ -183,7 +184,7 @@
     </div>
 
     <!-- ----------- contact -------------- -->
-    <div id="contact">
+    <div class="hidden" id="contact">
       <div class="container">
         <div class="row">
           <div class="contact-left">
@@ -248,5 +249,17 @@
       <p>Copyright © Roman Roth.<i class="fa-regular fa-heart"></i></p>
     </div>
     <script src="script.js"></script>
+
+    <!-- typed.js typing animation -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed(".auto-type", {
+        strings: ["traveler", "fan", "skier", "programmer"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true,
+      });
+    </script>
+    
   </body>
 </html>

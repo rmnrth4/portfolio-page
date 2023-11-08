@@ -6,3 +6,6 @@ https://youtu.be/0YFrGy_mzjY?si=uof9L7BJdNhP94Np
 https://www.youtube.com/watch?v=sGQSz22U8VM
 https://www.youtube.com/watch?v=znqUwx0b0HI ;video
 https://www.youtube.com/watch?v=SgmNxE9lWcY ;css animations for beginners
+https://www.youtube.com/watch?v=T33NN_pPeNI ;Scroll Animations
+https://www.youtube.com/watch?v=qEcXe51-ZTw ;Text Typing Animation On Website
+https://github.com/mattboldt/typed.js 
