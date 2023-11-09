@@ -142,18 +142,22 @@
 
     <!-- ------------- portfolio---------------- -->
     <div class="hidden" id="portfolio">
+      <div class="popup" id="popup">
+        <h1>Hello thanks for opening</h1>
+        <button type="button" onclick="closePopup()">Ok</button>
+      </div>
       <div class="container">
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
           <div class="work">
             <img src="images/IMG_3056.JPG" />
             <div class="layer">
-              <h3>Social Media App</h3>
+              <h3>Hawaii</h3>
               <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt.
+                Bilder von Hawaii
               </p>
-              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+              <a onclick="openPopup()" href="#portfolio"><i class="fa-solid fa-up-right-from-square"></i></a>
+
             </div>
           </div>
           <div class="work">
@@ -182,6 +186,7 @@
         <a href="#" class="btn">See more</a>
       </div>
     </div>
+
 
     <!-- ----------- contact -------------- -->
     <div class="hidden" id="contact">
