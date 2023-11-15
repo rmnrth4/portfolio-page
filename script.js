@@ -68,12 +68,22 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
-// popup
-let popup = document.getElementById("popup");
+// // popup
+// let popup = document.getElementById("popup");
 
-function openPopup() {
-  popup.classList.add("open-popup");
-}
-function closePopup() {
-  popup.classList.remove("open-popup");
+// function openPopup() {
+//   popup.classList.add("open-popup");
+// }
+// function closePopup() {
+//   popup.classList.remove("open-popup");
+// }
+
+function toggle() {
+  var x = document.getElementById("non_visibile");
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }

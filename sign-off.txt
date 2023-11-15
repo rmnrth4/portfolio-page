@@ -9,3 +9,4 @@ https://www.youtube.com/watch?v=SgmNxE9lWcY ;css animations for beginners
 https://www.youtube.com/watch?v=T33NN_pPeNI ;Scroll Animations
 https://www.youtube.com/watch?v=qEcXe51-ZTw ;Text Typing Animation On Website
 https://github.com/mattboldt/typed.js 
+https://github.com/lokesh/lightbox2

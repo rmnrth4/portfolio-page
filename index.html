@@ -7,6 +7,7 @@
     <link rel="icon" href="images/logo_rr.png">
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="lightbox.css">  <!-- Dies wird für die Foto Alben gebraucht -->
     <script
       src="https://kit.fontawesome.com/6b1c268a23.js"
       crossorigin="anonymous"
@@ -142,9 +143,9 @@
 
     <!-- ------------- portfolio---------------- -->
     <div class="hidden" id="portfolio">
-      <div class="popup" id="popup">
+      <!-- <div class="popup" id="popup">
         <h1>Hello thanks for opening</h1>
-        <button type="button" onclick="closePopup()">Ok</button>
+        <button type="button" onclick="closePopup()">Ok</button> -->
       </div>
       <div class="container">
         <h1 class="sub-title">My Work</h1>
@@ -156,7 +157,8 @@
               <p>
                 Bilder von Hawaii
               </p>
-              <a onclick="openPopup()" href="#portfolio"><i class="fa-solid fa-up-right-from-square"></i></a>
+              <a onclick="toggle()" href="#non_visibile"><i class="fa-solid fa-up-right-from-square"></i></a>
+              <!-- <a onclick="openPopup()" href="#portfolio"><i class="fa-solid fa-up-right-from-square"></i></a> -->
 
             </div>
           </div>
@@ -183,10 +185,39 @@
             </div>
           </div>
         </div>
-        <a href="#" class="btn">See more</a>
+        <a  class="btn">See more</a>
       </div>
     </div>
 
+    <!-- hidden section -->
+    <div id="non_visibile" class="not-visible">
+      <div class="gallery">
+        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
+          <img src="images/DSC_0456.JPG">
+        </a>
+        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
+          <img src="images/DSC_0456.JPG">
+        </a>
+        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
+          <img src="images/DSC_0456.JPG">
+        </a>
+        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
+          <img src="images/DSC_0456.JPG">
+        </a>
+        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
+          <img src="images/DSC_0456.JPG">
+        </a>
+        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
+          <img src="images/DSC_0456.JPG">
+        </a>
+        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
+          <img src="images/DSC_0456.JPG">
+        </a>
+        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
+          <img src="images/DSC_0456.JPG">
+        </a>
+      </div>
+    </div>
 
     <!-- ----------- contact -------------- -->
     <div class="hidden" id="contact">
@@ -194,8 +225,8 @@
         <div class="row">
           <div class="contact-left">
             <h1 class="sub-title">Contact Me</h1>
-            <p><i class="fa-regular fa-paper-plane"></i>romanroth44@gmail.com</p>
-            <p><i class="fa-solid fa-square-phone"></i></i>079 324 23 40</p>
+            <a href="mailto:romanroth44@gmail.com"><i class="fa-regular fa-paper-plane"></i>romanroth44@gmail.com</a>
+            <a href="tel:+41793242340"><i class="fa-solid fa-square-phone"></i>079 324 23 40</a>
             <div class="social-icons">
               <a href="https://www.instagram.com/rom4nr/"
                 ><i class="fa-brands fa-instagram"></i
@@ -257,6 +288,9 @@
 
     <!-- typed.js typing animation -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Foto album -->
+    <script src="lightbox-plus-jquery.js"></script>
+
     <script>
       var typed = new Typed(".auto-type", {
         strings: ["traveler", "fan", "skier", "programmer"],
