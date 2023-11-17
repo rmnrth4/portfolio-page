@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta tags for character set and viewport -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website</title>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="styles.css" />
+    <!-- Font Awesome script for icons -->
     <script
       src="https://kit.fontawesome.com/6b1c268a23.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
+    <!-- Header Text Content -->
     <div id="header">
       <div class="container">
         <nav>
+          <!-- Navigation Bar -->
+          <!-- Logo -->
           <img src="images/logo_rr.png" class="logo" />
+          <!-- Navigation Links -->
           <ul id="sidemenu">
             <li><a href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -24,8 +31,11 @@
             <li><a href="#contact">Contact</a></li>
             <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
           </ul>
+          <!-- Mobile Menu Icon -->
           <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
+
+        <!-- Header Text Content -->
         <div class="header-text">
           <p>UI/UX Designer</p>
           <h1>Hi, I'm <span>Roman</span><br />Roth from Switzerland</h1>
@@ -35,6 +45,7 @@
     <!-- ------------------------about--------------------- -->
     <div id="about">
       <div class="container">
+        <!-- About Content -->
         <div class="row">
           <div class="about-col-1">
             <img src="images/DSC_0456.jpg" />
@@ -53,10 +64,12 @@
               Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
               dolor sit amet.
             </p>
+            <!-- Tab Titles -->
             <div class="tab-titles">
               <p class="tab-links active-link" onclick="opentab('skills')">
                 Skills
               </p>
+              <!-- Additional tab titles... -->
               <p class="tab-links" onclick="opentab('experience')">
                 Experience
               </p>
@@ -189,16 +202,21 @@
             <h1 class="sub-title">Contact Me</h1>
             <p><i class="fa-regular fa-paper-plane"></i>romanroth44@gmail.com</p>
             <p><i class="fa-solid fa-square-phone"></i></i>079 324 23 40</p>
+            <!-- Social Icons -->
             <div class="social-icons">
               <a href="https://www.instagram.com/rom4nr/"
                 ><i class="fa-brands fa-instagram"></i
               ></a>
+              <!-- Additional social icons... -->
               <a href="https://www.linkedin.com/in/roman-roth-922862231/"
                 ><i class="fa-brands fa-linkedin"></i
               ></a>
+              <!-- Additional social icons... -->
             </div>
+            <!-- Download CV Button -->
             <a href="images/IMG_4625.JPG" download class="btn btn2">Download CV</a>
           </div>
+          <!-- Contact Form -->
           <div class="contact-right">
             <form name="submit-to-google-sheet">
               <input type="text" name="Name" placeholder="Your Name" required />
@@ -208,19 +226,25 @@
                 rows="6"
                 placeholder="Your Message"
               ></textarea>
+              <!-- Form input fields... -->
               <button type="submit" class="btn btn2">Submit</button>
             </form>
             <span id="msg"></span>
           </div>
         </div>
       </div>
+      <!-- Copyright Information -->
       <div class="copyright">
         <p>Copyright © Roman Roth.<i class="fa-regular fa-heart"></i></p>
       </div>
     </div>
+
+    <!-- JavaScript Section -->  
     <script>
+      // Functionality for tab switching
       var tablinks = document.getElementsByClassName("tab-links");
       var tabcontents = document.getElementsByClassName("tab-contents");
+      // Logic for tab switching...
       function opentab(tabname) {
         for (tablink of tablinks) {
           tablink.classList.remove("active-link");
@@ -238,14 +262,15 @@
       var sidemenu = document.getElementById("sidemenu");
       function openmenu(){
         sidemenu.style.right = "0";
-
+       // Logic for opening mobile menu...
       }
       function closemenu(){
         sidemenu.style.right = "-200px";
-        
+       // Logic for closing mobile menu... 
       }
     </script>
     <script>
+      // Form submission with Google Sheets integration
       const scriptURL = 'https://script.google.com/macros/s/AKfycbwZkx-b8hJx1ZksCmu7UKjppEDnw5Tj0V0Lxtwpdvtuzx3iN66eFZuiZbBmEkf_r6RDfQ/exec'
       const form = document.forms['submit-to-google-sheet']
       const msg = document.getElementById("msg")
@@ -261,6 +286,7 @@
             form.reset()
           })
           .catch(error => console.error('Error!', error.message))
+        // Handling error...
       })
     </script>
 
