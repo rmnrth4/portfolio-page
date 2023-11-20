@@ -80,7 +80,6 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 function toggle() {
   var x = document.getElementById("non_visibile");
-
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
