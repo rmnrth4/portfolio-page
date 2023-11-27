@@ -13,28 +13,42 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+
   </head>
   <body>
-    <div id="header">
-      <div class="container">
-        <nav>
-          <img src="images/logo_rr.png" class="logo" />
-          <ul id="sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-          </ul>
-          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-          <p>UI/UX Designer</p>
-          <h1>Hi, I'm <span>Roman</span><br />Roth from Switzerland and <br> I am a <span class="auto-type"></span></h1>
+
+    <div class="hero">
+      <video autoplay loop muted plays-inline class="back-video">
+        <source src="images/Dolomites.m4v">
+      </video>
+      <nav>
+        <img src="images/logo_rr.png" class="logo" />
+        <ul id="sidemenu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+
+      <div class="hero-row">
+        <div class="hero-col-1">
+          <img src="images/mobi_pb_hoch.png" alt="">
+        </div>
+
+        <div class="hero-col-2">
+          <div class="hero-text">
+            <h1>Hi, I'm <span>Roman</span><br/> and I am a <span class="auto-type"></span></h1>
+          </div>
         </div>
       </div>
-    </div> 
+        
+            
+    </div>
+
 
     <!-- ------------------------about--------------------- -->
     <div class="hidden" id="about">
@@ -189,6 +203,11 @@
       </div>
     </div>
 
+    <div class="content">
+      <h1>California</h1>
+      <a href="#">Explore</a>
+    </div>
+
     <!-- hidden section -->
     <div id="non_visibile" class="not-visible">
       <div class="gallery">
@@ -257,18 +276,6 @@
             <span id="msg"></span>
           </div>
         </div>
-      </div>
-    </div>
-
-
-    <!--  video  -->
-    <div class="hero">
-      <video autoplay loop muted plays-inline class="back-video">
-        <source src="images/Dolomites.m4v">
-      </video>
-      <div class="content">
-        <h1>California</h1>
-        <a href="#">Explore</a>
       </div>
     </div>
 

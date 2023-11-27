@@ -11,28 +11,30 @@ body {
   background: #080808;
   color: #fff;
 }
-#header {
+
+/* --------- hero section --------- */
+.hero {
   width: 100%;
   height: 100vh;
-  background-image: url(images/DSC_0456.JPG);
-  background-size: cover;
-  background-position: center;
-}
-.container {
+  position: relative;
   padding: 10px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 10%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
-
-.logo {
+nav .logo {
   width: 140px;
 }
-
 nav ul li {
   display: inline-block;
   list-style: none;
@@ -58,20 +60,76 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
 }
-.header-text {
-  margin-top: 20%;
+
+.hero-row {
+  margin-top: 25%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.hero-col-1 {
+  flex-basis: 18%;
+  background-color: #61b;
+}
+.hero-col-1 img {
+  max-width: 100%;
+  width: auto;
+  border-radius: 15px;
+}
+.hero-col-2 {
+  flex-basis: 80%;
+  background-color: #61b752;
+  position: relative;
+}
+.hero-text {
+  display: flex;
   font-size: 30px;
 }
-.header-text h1 {
+.hero-text h1 {
   font-size: 60px;
   margin-top: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
 }
-.header-text h1 span {
+.hero-text h1 span {
   color: #ab0909;
+}
+
+/* video */
+.video {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
+  position: relative;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.container {
+  padding: 10px 10%;
 }
 
 /*------------------------about---------------------*/
 #about {
+  background-color: orange;
   padding: 80px 0;
   color: #ababab;
 }
@@ -83,6 +141,7 @@ nav ul li a:hover::after {
 
 .about-col-1 {
   flex-basis: 35%;
+  background-color: #61b752;
 }
 .about-col-1 img {
   width: 100%;
@@ -90,6 +149,7 @@ nav ul li a:hover::after {
 }
 .about-col-2 {
   flex-basis: 60%;
+  background-color: #61b;
 }
 
 .sub-title {
@@ -321,6 +381,13 @@ form .btn2 {
   margin-top: 20px;
   cursor: pointer;
 }
+
+#msg {
+  color: #61b752;
+  margin-top: -40px;
+  display: block;
+}
+
 .copyright {
   width: 100%;
   text-align: center;
@@ -337,14 +404,11 @@ nav .fa-solid {
   display: none;
 }
 @media only screen and (max-width: 600px) {
-  #header {
-    background-image: url("images/IMG_4625.JPG");
-  }
-  .header-text {
+  .hero-text {
     margin-top: 100%;
     font-size: 16px;
   }
-  .header-text h1 {
+  .hero-text h1 {
     font-size: 30px;
   }
   nav .fa-solid {
@@ -375,6 +439,17 @@ nav .fa-solid {
   .sub-title {
     font-size: 40px;
   }
+  .hero-col-1,
+  .hero-col-2 {
+    flex-basis: 50%;
+  }
+  .hero-col-1 {
+    margin-bottom: 15px;
+  }
+  .hero-col-2 {
+    font-size: 14px;
+  }
+
   .about-col-1,
   .about-col-2 {
     flex-basis: 100%;
@@ -397,11 +472,6 @@ nav .fa-solid {
     font-size: 14px;
   }
 }
-#msg {
-  color: #61b752;
-  margin-top: -40px;
-  display: block;
-}
 
 /* neon */
 .neon {
@@ -423,60 +493,6 @@ nav .fa-solid {
     0 0 40px #f10, 0 0 60px #f10, 0 0 80px #f10, 0 0 100px #f10;
   box-shadow: 0 0 5px #fff, inset 0 0 5px #fff, 0 0 20px #08f,
     inset 0 0 20px #08f, 0 0 40px #08f, inset 0 0 40px #08f;
-}
-
-/* video */
-.hero {
-  width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
-  position: relative;
-  padding: 0 5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.content {
-  text-align: center;
-}
-.content h1 {
-  font-size: 160px;
-  color: #fff;
-  font-weight: 600;
-  transition: 0.5s;
-}
-.content h1:hover {
-  -webkit-text-stroke: 2px #fff;
-  color: transparent;
-}
-.content a {
-  text-decoration: none;
-  display: inline-block;
-  color: #fff;
-  font-size: 24px;
-  border: 2px solid #fff;
-  padding: 14px 70px;
-  border-radius: 50px;
-  margin-top: 20px;
-}
-.back-video {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-@media (min-aspect-ratio: 16/9) {
-  .back-video {
-    width: 100%;
-    height: auto;
-  }
-}
-@media (max-aspect-ratio: 16/9) {
-  .back-video {
-    width: auto;
-    height: 100%;
-  }
 }
 
 /* css-animations */
@@ -705,4 +721,29 @@ nav .fa-solid {
 .thecard img {
   max-height: 130px;
   max-width: 200px;
+}
+
+/* titel California */
+.content {
+  text-align: center;
+}
+.content h1 {
+  font-size: 160px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.content h1:hover {
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
+}
+.content a {
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-size: 24px;
+  border: 2px solid #fff;
+  padding: 14px 70px;
+  border-radius: 50px;
+  margin-top: 20px;
 }
