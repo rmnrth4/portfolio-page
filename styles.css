@@ -69,7 +69,7 @@ nav ul li a:hover::after {
 }
 .hero-col-1 {
   flex-basis: 18%;
-  background-color: #61b;
+  /* background-color: #61b; */
 }
 .hero-col-1 img {
   max-width: 100%;
@@ -78,7 +78,7 @@ nav ul li a:hover::after {
 }
 .hero-col-2 {
   flex-basis: 80%;
-  background-color: #61b752;
+  /* background-color: #61b752; */
   position: relative;
 }
 .hero-text {
@@ -129,7 +129,7 @@ nav ul li a:hover::after {
 
 /*------------------------about---------------------*/
 #about {
-  background-color: orange;
+  /* background-color: orange; */
   padding: 80px 0;
   color: #ababab;
 }
@@ -141,7 +141,7 @@ nav ul li a:hover::after {
 
 .about-col-1 {
   flex-basis: 35%;
-  background-color: #61b752;
+  /* background-color: #61b752; */
 }
 .about-col-1 img {
   width: 100%;
@@ -149,7 +149,7 @@ nav ul li a:hover::after {
 }
 .about-col-2 {
   flex-basis: 60%;
-  background-color: #61b;
+  /* background-color: #61b; */
 }
 
 .sub-title {
