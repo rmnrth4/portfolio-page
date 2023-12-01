@@ -518,12 +518,13 @@ nav .fa-solid {
   outline: 0;
   background: #ebfffc;
   color: #555;
-  padding: 10px 25px;
   height: 60px;
   border-radius: 30px;
   flex: 1;
-  margin-right: 16px;
-  font-size: 18px;
+  margin-right: 10px;
+  font-size: 20px;
+
+  text-align: center;
 }
 .weather-card .search button {
   border: 0;
@@ -538,7 +539,14 @@ nav .fa-solid {
   width: 25px;
   text-align: center;
 }
-.error {
+.weather-card .search button i {
+  font-size: 25px;
+  color: #555;
+}
+.weather-card .get-location {
+  margin-right: 10px;
+}
+.weather-card .location-error {
   text-align: left;
   margin-left: 10px;
   font-size: 14px;

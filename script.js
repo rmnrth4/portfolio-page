@@ -52,7 +52,7 @@ function sendEmail() {
       }, 5000);
       form.reset();
     })
-    .catch((error) => console.error("Error!", error.message));
+    .catch((error) => console.location - error("Error!", error.message));
 }
 
 // scroll animations
@@ -90,91 +90,91 @@ function toggle() {
 }
 
 // Geo Location
-locationBtn.addEventListener("click", () => {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(ShowPosition, showError);
+document
+  .querySelector(".get-location")
+  .addEventListener("click", geoLookUp, false);
+
+function geoLookUp() {
+  const status = document.querySelector(".location-error");
+
+  function ShowPosition(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    // alert(`lat: ${latitude}, lon: ${longitude}`);
+    setWeather(latitude, longitude);
+  }
+
+  function showError(error) {
+    status.textContent = "unable to retrive your location";
+    switch (error.code) {
+      case error.PERMISSION_DENIED:
+        alert("You denied the request for Geolocation.");
+        break;
+
+      case error.POSITON_UNAVAILABLE:
+        alert("Location information is unavailable.");
+        break;
+
+      case error.TIMEOUT:
+        alert("The request to get user location timed out.");
+        break;
+      case error.UNKNOWN_ERROR:
+        alert("An unknown error occured.");
+        break;
+      default:
+        alert("An unknown error occured.");
+    }
+  }
+
+  if (!navigator.geolocation) {
+    status.textContent = "Geolocation is not supported by this browser.";
   } else {
-    alert("Geolocation is not supported by this browser.");
+    navigator.geolocation.getCurrentPosition(ShowPosition, showError);
   }
-});
-
-const ShowPosition = (position) => {
-  let lat = position.coords.latitude;
-  let lng = position.coords.longitude;
-  console.log(lat, lng);
-};
-
-const showError = (error) => {
-  switch (error.code) {
-    case error.PERMISSION_DENIED:
-      alert("You denied the request for Geolocation.");
-      break;
-
-    case error.POSITON_UNAVAILABLE:
-      alert("Location information is unavailable.");
-      break;
-
-    case error.TIMEOUT:
-      alert("The request to get user location timed out.");
-      break;
-    case error.UNKNOWN_ERROR:
-      alert("An unknown error occured.");
-      break;
-    default:
-      alert("An unknown error occured.");
-  }
-};
+}
 
 // weather
 const apiKey = "8d9e914e1b85d4b76d5dd5e3564409cd";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&";
-
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search-city");
-const locationBtn = document.querySelector(".get-location");
 const weatherIcon = document.querySelector(".weather-icon");
 
-async function checkWeather(city = null, lon = null, lat = null) {
-  if (city !== null) {
-    const response = await fetch(apiUrl + "q=" + city + `&appid=${apiKey}`);
+function updateWeatherUI(data) {
+  document.querySelector(".city").innerHTML = data.name;
+  document.querySelector(".temp").innerHTML =
+    Math.round(data.main.temp) + " °C";
+  document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+  document.querySelector(".wind").innerHTML =
+    Math.round(data.wind.speed) + "km/h";
 
-    if (response.status == 404) {
-      document.querySelector(".error").style.display = "block";
-      document.querySelector(".weather").style.display = "none";
-    } else {
-      var data = await response.json();
+  const weatherType = data.weather[0].main.toLowerCase();
+  const imageSrc = `images/weather/${weatherType}.png`;
+  weatherIcon.src = imageSrc;
 
-      document.querySelector(".city").innerHTML = data.name;
-      document.querySelector(".temp").innerHTML =
-        Math.round(data.main.temp) + " °C";
-      document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
-      document.querySelector(".wind").innerHTML =
-        Math.round(data.wind.speed) + "km/h";
+  document.querySelector(".weather").style.display = "block";
+  document.querySelector(".location-error").style.display = "none";
+}
 
-      if (data.weather[0].main == "Clouds") {
-        weatherIcon.src = "images/weather/clouds.png";
-      } else if (data.weather[0].main == "Clear") {
-        weatherIcon.src = "images/weather/clear.png";
-      } else if (data.weather[0].main == "Rain") {
-        weatherIcon.src = "images/weather/rain.png";
-      } else if (data.weather[0].main == "Drizzle") {
-        weatherIcon.src = "images/weather/drizzle.png";
-      } else if (data.weather[0].main == "Mist") {
-        weatherIcon.src = "images/weather/mist.png";
-      } else if (data.weather[0].main == "Snow") {
-        weatherIcon.src = "images/weather/snow.png";
-      } else if (data.weather[0].main == "Drizzle") {
-        weatherIcon.src = "images/weather/drizzle.png";
-      }
+async function fetchWeather(url) {
+  const response = await fetch(url);
 
-      document.querySelector(".weather").style.display = "block";
-      document.querySelector(".error").style.display = "none";
-    }
+  if (response.status == 404) {
+    document.querySelector(".location-error").style.display = "block";
+    document.querySelector(".weather").style.display = "none";
   } else {
-    // const response = await fetch(apiUrl + "lat=" + lat + "&lon=" + lon + `&appid=${apiKey}`);
+    const data = await response.json();
+    updateWeatherUI(data);
   }
 }
 
 searchBtn.addEventListener("click", () => {
-  checkWeather(searchBox.value);
+  const city = searchBox.value;
+  const searchUrl = `${apiUrl}q=${city}&appid=${apiKey}`;
+  fetchWeather(searchUrl);
 });
+
+async function setWeather(latitude, longitude) {
+  const locationUrl = `${apiUrl}lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+  fetchWeather(locationUrl);
+}
