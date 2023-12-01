@@ -4,36 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/logo_rr.png">
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="lightbox.css">  <!-- Dies wird für die Foto Alben gebraucht -->
     <script
       src="https://kit.fontawesome.com/6b1c268a23.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
   </head>
   <body>
-    <div id="header">
-      <div class="container">
-        <nav>
-          <img src="images/logo_rr.png" class="logo" />
-          <ul id="sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-          </ul>
-          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-          <p>UI/UX Designer</p>
-          <h1>Hi, I'm <span>Roman</span><br />Roth from Switzerland</h1>
+
+    <div class="hero">
+      <video autoplay loop muted plays-inline class="back-video">
+        <source src="images/Dolomites.m4v">
+      </video>
+      <nav>
+        <img src="images/logo_rr.png" class="logo" />
+        <ul id="sidemenu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+
+      <div class="hero-row">
+        <div class="hero-col-1">
+          <img src="images/mobi_pb_hoch.png" alt="">
+        </div>
+
+        <div class="hero-col-2">
+          <div class="hero-text">
+            <h1>Hi, I'm <span>Roman</span><br/> and I am a <span class="auto-type"></span></h1>
+          </div>
         </div>
       </div>
-    </div> 
+        
+            
+    </div>
+
+
     <!-- ------------------------about--------------------- -->
-    <div id="about">
+    <div class="hidden" id="about">
       <div class="container">
         <div class="row">
           <div class="about-col-1">
@@ -42,16 +60,13 @@
           <div class="about-col-2">
             <h1 class="sub-title">About Me</h1>
             <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-              invidunt ut labore et dolore magna aliquyam erat, sed diam
-              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-              dolor sit amet.
+              Hello, my name is Roman. :) <br> I'd like to tell you a few words about myself here. <br> I grew up in Rüderswil, a sleepy village in the heart of the beautiful Emmental. My father is a track fitter specialising in overhead lines and my mother works as a carer in a retirement home. I have one younger sister. <br>
+              After my apprenticeship as a retail specialist, I completed my technical vocational baccalaureate in Langenthal. I then did my military service and gained professional experience as a retail specialist at Melectronics in various branches. <br>
+              Since autumn 2020, I have been studying business informatics at the Bern University of Applied Sciences (BFH) on a part-time basis. <br>
+              
+              Outside of work, I love doing sports, discovering new places and spending time with my friends and family. I have been passionate about playing flag football since the summer of 2021. My friends and I founded the flag football club "Aemme Buzzards". In addition to my sporting commitment, I am also a board member, where I take care of merchandise, marketing and sponsorship. <br> 
+              In winter, you can often find me skiing in the Bernese Oberland. During the summer, I enjoy hiking, jogging and biking. <br>
+              I am also fascinated by discovering foreign cultures and countries. I have already had the opportunity to go on two longer trips. In 2018, I spent two months exploring the islands of Hawaii, and in 2022, I had the opportunity to spend a month travelling around Java, Bali and Lombok in Indonesia.
             </p>
             <div class="tab-titles">
               <p class="tab-links active-link" onclick="opentab('skills')">
@@ -100,8 +115,9 @@
         </div>
       </div>
     </div>
+
     <!-- -----------------services--------------------- -->
-    <div id="services">
+    <div class="hidden" id="services">
       <div class="container">
         <h1 class="sub-title">My Services</h1>
         <div class="services-list">
@@ -138,19 +154,24 @@
     </div>
 
     <!-- ------------- portfolio---------------- -->
-    <div id="portfolio">
+    <div class="hidden" id="portfolio">
+      <!-- <div class="popup" id="popup">
+        <h1>Hello thanks for opening</h1>
+        <button type="button" onclick="closePopup()">Ok</button> -->
+      </div>
       <div class="container">
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
           <div class="work">
             <img src="images/IMG_3056.JPG" />
             <div class="layer">
-              <h3>Social Media App</h3>
+              <h3>Hawaii</h3>
               <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt.
+                Bilder von Hawaii
               </p>
-              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+              <a onclick="toggle()" href="#non_visibile"><i class="fa-solid fa-up-right-from-square"></i></a>
+              <!-- <a onclick="openPopup()" href="#portfolio"><i class="fa-solid fa-up-right-from-square"></i></a> -->
+
             </div>
           </div>
           <div class="work">
@@ -176,17 +197,53 @@
             </div>
           </div>
         </div>
-        <a href="#" class="btn">See more</a>
+        <a  class="btn">See more</a>
       </div>
     </div>
+
+    <div class="content">
+      <h1>California</h1>
+      <a href="#">Explore</a>
+    </div>
+
+    <!-- hidden section -->
+    <div id="non_visibile" class="not-visible">
+      <div class="gallery">
+        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
+          <img src="images/DSC_0456.JPG">
+        </a>
+        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
+          <img src="images/DSC_0456.JPG">
+        </a>
+        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
+          <img src="images/DSC_0456.JPG">
+        </a>
+        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
+          <img src="images/DSC_0456.JPG">
+        </a>
+        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
+          <img src="images/DSC_0456.JPG">
+        </a>
+        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
+          <img src="images/DSC_0456.JPG">
+        </a>
+        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
+          <img src="images/DSC_0456.JPG">
+        </a>
+        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
+          <img src="images/DSC_0456.JPG">
+        </a>
+      </div>
+    </div>
+
     <!-- ----------- contact -------------- -->
-    <div id="contact">
+    <div class="hidden" id="contact">
       <div class="container">
         <div class="row">
           <div class="contact-left">
             <h1 class="sub-title">Contact Me</h1>
-            <p><i class="fa-regular fa-paper-plane"></i>romanroth44@gmail.com</p>
-            <p><i class="fa-solid fa-square-phone"></i></i>079 324 23 40</p>
+            <a href="mailto:romanroth44@gmail.com"><i class="fa-regular fa-paper-plane"></i>romanroth44@gmail.com</a>
+            <a href="tel:+41793242340"><i class="fa-solid fa-square-phone"></i>079 324 23 40</a>
             <div class="social-icons">
               <a href="https://www.instagram.com/rom4nr/"
                 ><i class="fa-brands fa-instagram"></i
@@ -194,73 +251,195 @@
               <a href="https://www.linkedin.com/in/roman-roth-922862231/"
                 ><i class="fa-brands fa-linkedin"></i
               ></a>
+              <a href="https://github.com/rmnrth4">
+                <i class="fa-brands fa-github"></i>
+              </a>
             </div>
             <a href="images/IMG_4625.JPG" download class="btn btn2">Download CV</a>
           </div>
           <div class="contact-right">
-            <form name="submit-to-google-sheet">
-              <input type="text" name="Name" placeholder="Your Name" required />
-              <input type="email" name="Email" placeholder="Your Email" />
+
+            <form name="submit-to-mail"; onsubmit=sendEmail(); reset(); return false;>
+              <input type="text" id="Name" placeholder="Your Name" required/>
+              <input type="email" id="Email" placeholder="Your Email" required/>
               <textarea
-                name="Message"
+                id="Message"
                 rows="6"
                 placeholder="Your Message"
               ></textarea>
-              <button type="submit" class="btn btn2">Submit</button>
+              <!-- <button type="submit" class="btn btn2">Submit</button> -->
+              <button type="submit" class="neon">Submit</button>
             </form>
+
             <span id="msg"></span>
           </div>
         </div>
       </div>
-      <div class="copyright">
-        <p>Copyright © Roman Roth.<i class="fa-regular fa-heart"></i></p>
+    </div>
+
+    
+    <!-- weather api -->
+    <div class="weather-card">
+      <div class="search">
+        <input type="text" placeholder="Enter City name" spellcheck="false">
+      <button><img src="images/weather/search.png"></button>
+      </div>
+      <div class="error">
+        <p>Invalid City name</p>
+      </div>
+      <div class="weather">
+        <img src="images/weather/rain.png" class="weather-icon">
+        <h1 class="temp">22°C</h1>
+        <h2 class="city">New York</h2>
+        <div class="details">
+          <div class="col">
+            <img src="images/weather/humidity.png">
+            <div>
+            <p class="humidity">50%</p>
+            <p>Humidity</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="images/weather/wind.png">
+            <div>
+            <p class="wind">15km/h</p>
+            <p>Wind speed</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <script>
-      var tablinks = document.getElementsByClassName("tab-links");
-      var tabcontents = document.getElementsByClassName("tab-contents");
-      function opentab(tabname) {
-        for (tablink of tablinks) {
-          tablink.classList.remove("active-link");
-        }
-        for (tabcontent of tabcontents) {
-          tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-      }
 
-    </script>
+    <!-- css flip card effect -->
+    <div class="maincontainer" id="flip-card">
+        <h1 class="heading">Cards</h1>
+        <div class="card-container">
 
-    <script>
-      var sidemenu = document.getElementById("sidemenu");
-      function openmenu(){
-        sidemenu.style.right = "0";
+          <div class="thecard">
+            <div class="thefront">
+              <h2>HTML</h2>
+              <i class="fa-brands fa-html5"></i>
+            </div>
+            <div class="theback">
+              Back of the card
+            </div>
+          </div>
+          <div class="thecard">
+            <div class="thefront">
+              <h2>CSS</h2>
+              <i class="fa-brands fa-css3-alt"></i>
+            </div>
+            <div class="theback">
+              Back of the card
+            </div>
+          </div>
+          <div class="thecard">
+            <div class="thefront">
+              <h2>JavaScript</h2>
+              <i class="fa-brands fa-js"></i>
+            </div>
+            <div class="theback">
+              Back of the card
+            </div>
+          </div>
+          <div class="thecard">
+            <div class="thefront">
+              <h2>SQL</h2>
+              <img src="images/sql.png" />
+            </div>
+            <div class="theback">
+              SAS
+            </div>
+          </div>
+          <div class="thecard">
+            <div class="thefront">
+              <h2>R</h2>
+              <i class="fa-brands fa-r-project"></i>
+            </div>
+            <div class="theback">
+              Back of the card
+            </div>
+          </div>
+          <div class="thecard">
+            <div class="thefront">
+              <h2>Python</h2>
+              <i class="fa-brands fa-python"></i>
+            </div>
+            <div class="theback">
+              Back of the card
+            </div>
+          </div>
+          <div class="thecard">
+            <div class="thefront">
+              <h2>PySpark</h2>
+              <img src="images/Apache_Spark.png" />
+            </div>
+            <div class="theback">
+              Back of the card
+            </div>
+          </div>
+          <div class="thecard">
+            <div class="thefront">
+              <h2>VBA</h2>
+              <img src="images/vba-logo.webp" />
+            </div>
+            <div class="theback">
+              Back of the card
+            </div>
+          </div>
 
-      }
-      function closemenu(){
-        sidemenu.style.right = "-200px";
+
+
+
+        </div>
+
+          
+
         
-      }
-    </script>
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbwZkx-b8hJx1ZksCmu7UKjppEDnw5Tj0V0Lxtwpdvtuzx3iN66eFZuiZbBmEkf_r6RDfQ/exec'
-      const form = document.forms['submit-to-google-sheet']
-      const msg = document.getElementById("msg")
     
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-              msg.innerHTML = ""
-            },5000)
-            form.reset()
-          })
-          .catch(error => console.error('Error!', error.message))
-      })
-    </script>
+    </div>
 
+
+
+    <!-- API -->
+    <!-- <div class="api">
+      <table>
+        <thead>
+          <tr>
+            <th>Title name</th>
+            <th>Title name</th>
+            <th>Title name</th>
+            <th>Title name</th>
+            <th>Title name</th>
+          </tr>
+        </thead>
+        <tbody id="data-output">
+         insert of json 
+        </tbody>
+      </table>
+    </div> -->
+
+
+    <div class="copyright">
+      <p>Copyright © Roman Roth.<i class="fa-regular fa-heart"></i></p>
+    </div>
+    <script src="script.js"></script>
+
+    <!-- typed.js typing animation -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Foto album -->
+    <script src="lightbox-plus-jquery.js"></script>
+
+    <script>
+      var typed = new Typed(".auto-type", {
+        strings: ["traveler", "fan", "skier", "programmer"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true,
+      });
+
+      checkWeather();
+    </script>
+    
   </body>
 </html>
