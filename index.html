@@ -282,10 +282,15 @@
     <div class="weather-card">
       <div class="search">
         <input type="text" placeholder="Enter City name" spellcheck="false">
-      <button><img src="images/weather/search.png"></button>
+        <button class="get-location">
+          <i class="fa-solid fa-map-location"></i>
+        </button>
+        <button class="search-city">
+          <img src="images/weather/search.png">
+        </button>
       </div>
-      <div class="error">
-        <p>Invalid City name</p>
+      <div class="location-error">
+        <p>Invalid city name / Location not found</p>
       </div>
       <div class="weather">
         <img src="images/weather/rain.png" class="weather-icon">
@@ -423,8 +428,7 @@
     <div class="copyright">
       <p>Copyright © Roman Roth.<i class="fa-regular fa-heart"></i></p>
     </div>
-    <script src="script.js"></script>
-
+    <script type="module" src="script.js"></script>
     <!-- typed.js typing animation -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- Foto album -->
@@ -437,8 +441,6 @@
         backSpeed: 150,
         loop: true,
       });
-
-      checkWeather();
     </script>
     
   </body>
