@@ -33,7 +33,43 @@
         </ul>
         <i class="fa-solid fa-bars" onclick="openmenu()"></i>
       </nav>
-
+      <!-- weather api -->
+        <div class="weather-card">
+          <div class="search">
+            <input type="text" placeholder="Enter City name" spellcheck="false">
+            <button class="get-location">
+              <i class="fa-solid fa-map-location"></i>
+            </button>
+            <button class="search-city">
+              <img src="images/weather/search.png">
+            </button>
+          </div>
+          <div class="location-error">
+            <p>Invalid city name / Location not found</p>
+          </div>
+          <div class="weather">
+            <img src="images/weather/rain.png" class="weather-icon">
+            <h1 class="temp">22°C</h1>
+            <h2 class="city">New York</h2>
+            <div class="details">
+              <div class="col">
+                <img src="images/weather/humidity.png">
+                <div>
+                <p class="humidity">50%</p>
+                <p>Humidity</p>
+                </div>
+              </div>
+              <div class="col">
+                <img src="images/weather/wind.png">
+                <div>
+                <p class="wind">15km/h</p>
+                <p>Wind speed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
       <div class="hero-row">
         <div class="hero-col-1">
           <img src="images/mobi_pb_hoch.png" alt="">
@@ -278,42 +314,8 @@
     </div>
 
     
-    <!-- weather api -->
-    <div class="weather-card">
-      <div class="search">
-        <input type="text" placeholder="Enter City name" spellcheck="false">
-        <button class="get-location">
-          <i class="fa-solid fa-map-location"></i>
-        </button>
-        <button class="search-city">
-          <img src="images/weather/search.png">
-        </button>
-      </div>
-      <div class="location-error">
-        <p>Invalid city name / Location not found</p>
-      </div>
-      <div class="weather">
-        <img src="images/weather/rain.png" class="weather-icon">
-        <h1 class="temp">22°C</h1>
-        <h2 class="city">New York</h2>
-        <div class="details">
-          <div class="col">
-            <img src="images/weather/humidity.png">
-            <div>
-            <p class="humidity">50%</p>
-            <p>Humidity</p>
-            </div>
-          </div>
-          <div class="col">
-            <img src="images/weather/wind.png">
-            <div>
-            <p class="wind">15km/h</p>
-            <p>Wind speed</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    
+    
 
     <!-- css flip card effect -->
     <div class="maincontainer" id="flip-card">
@@ -428,7 +430,9 @@
     <div class="copyright">
       <p>Copyright © Roman Roth.<i class="fa-regular fa-heart"></i></p>
     </div>
-    <script type="module" src="script.js"></script>
+    <script type="module" src="weather.js"></script>
+    <script src="script.js"></script>
+
     <!-- typed.js typing animation -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- Foto album -->
