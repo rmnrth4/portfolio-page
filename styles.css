@@ -28,7 +28,7 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 10px 10%;
+  padding: 10px 10% 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -67,20 +67,23 @@ nav ul li a:hover::after {
 
 .weather-card {
   position: absolute;
-  top: calc(5% + 20px);
   right: 10%;
-  z-index: 100;
+  top: calc(3% + 10px);
   width: 450px;
   max-width: 100%;
+
+  /* max-width: 345px; */
+  /* padding: 25px; */
   /* background: linear-gradient(135deg, #00feba, #5b548a); */
   background: linear-gradient(180deg, #ab0909, #ebb434);
   color: #fff;
   margin: 6% auto 0;
   border-radius: 40px;
-  padding: 2% 1.8%;
+  padding: 25px 25px;
   text-align: center;
-  @media screen and (max-width: 830px) {
-    top: calc(10% + 20px);
+
+  @media screen and (max-width: 1400px) {
+    top: calc(8% + 20px);
   }
 }
 .weather-card .search {
@@ -167,15 +170,12 @@ nav ul li a:hover::after {
 .weather-card .weather {
   display: none;
 }
-/* @media screen and (max-width: 820px) {
-  .weather-card {
-    top: 13%;
-  }
-} */
+
 @media screen and (max-width: 830px) {
   .weather-card {
-    max-width: 80%;
-    padding: 5%;
+    top: calc(10% + 10px);
+    max-width: 345px;
+    padding: 25px;
   }
   .weather-card .search input {
     height: 40px;
@@ -218,15 +218,18 @@ nav ul li a:hover::after {
 
 .hero-row {
   width: 100%;
-  margin-top: 35%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   /* background-color: #ebb434; */
+  position: absolute;
+  padding: 0px 10%;
+  bottom: 40px;
 }
 .hero-col-1 {
   flex-basis: 16%;
   /* background-color: #61b; */
+  position: relative;
 }
 .hero-col-1 img {
   max-width: 100%;
@@ -243,7 +246,6 @@ nav ul li a:hover::after {
 }
 .hero-col-2 .hero-text h1 {
   font-size: 5vw;
-  margin-top: 20px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -255,25 +257,29 @@ nav ul li a:hover::after {
 
 @media screen and (max-width: 830px) {
   .hero-row {
-    flex-direction: column; /* Änderung der Flexbox-Ausrichtung */
-    padding-top: 280px;
+    height: auto;
+    flex-direction: column;
   }
   .hero-col-1 {
-    flex-basis: 100%; /* Vollständige Breite für die hero-col-1 */
-    margin-bottom: 70px;
+    order: 0;
   }
   .hero-col-1 img {
-    max-width: 30%;
-    width: auto;
+    height: 200px;
+    border-radius: 8px;
   }
   .hero-col-2 {
-    flex-basis: 100%; /* Vollständige Breite für die hero-col-2 */
-    /* Ändere die Reihenfolge, um hero-col-2 über hero-col-1 anzuzeigen */
     order: 1;
-    margin-top: -20px;
-    margin-bottom: -20px;
+  }
+  .hero-col-2 .hero-text {
+    padding: 15px;
+  }
+  .hero-col-2 .hero-text h1 {
+    font-size: 3.1vh; /* Adjusted font size for better visibility */
+    top: 0; /* Align the text to the top */
+    left: 0; /* Align the text to the left */
   }
 }
+
 /* video */
 .video {
   width: 100%;
@@ -578,6 +584,7 @@ form .btn2 {
 }
 /* ----------------css for small screens ------------------- */
 nav .fa-solid {
+  cursor: pointer;
   display: none;
 }
 @media only screen and (max-width: 830px) {
@@ -596,8 +603,8 @@ nav .fa-solid {
     background: #ab0909;
     position: fixed;
     top: 0;
-    right: -200px;
-    width: 200px;
+    right: -130px;
+    width: 130px;
     height: 100vh;
     padding-top: 50px;
     z-index: 2;
