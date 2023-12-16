@@ -1,3 +1,24 @@
+// aboutme text
+// const h2s = document.querySelectorAll(".aboutme h2");
+
+// const beobachter = new IntersectionObserver(
+//   (entries) => {
+//     for (const entry of entries) {
+//       if (entry.isIntersecting) {
+//         entry.target.classList.add("visible");
+//       } else {
+//         entry.target.classList.remove("visible");
+//       }
+//     }
+//   },
+//   {
+//     threshold: 1.0,
+//     rootMargin: "20%",
+//   }
+// );
+
+// h2s.forEach((h2) => beobachter.observe(h2));
+
 // about-me tabs
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
@@ -54,6 +75,8 @@ function sendEmail() {
 }
 
 // scroll animations
+
+// about column timeline
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry);
@@ -68,6 +91,33 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
+// about column right
+const observerhiddenright = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show-right-left");
+    } else {
+      entry.target.classList.remove("show-right-left");
+    }
+  });
+});
+const hiddenRightElements = document.querySelectorAll(".hidden-right");
+hiddenRightElements.forEach((el) => observerhiddenright.observe(el));
+
+// about column left
+const observerhiddenleft = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show-right-left");
+    } else {
+      entry.target.classList.remove("show-right-left");
+    }
+  });
+});
+const hiddenLeftElements = document.querySelectorAll(".hidden-left");
+hiddenLeftElements.forEach((el) => observerhiddenleft.observe(el));
 // // popup
 // let popup = document.getElementById("popup");
 

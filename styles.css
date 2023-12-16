@@ -337,7 +337,7 @@ nav ul li a:hover::after {
   font-weight: 600;
   color: #fff;
 }
-
+/* 
 .timeline {
   margin: 5em auto;
   max-width: 34.15em;
@@ -400,7 +400,7 @@ nav ul li a:hover::after {
 }
 .checkpoint:nth-child(even) div::before {
   right: -0.5em;
-}
+} */
 
 .tab-titles {
   display: flex;
@@ -694,7 +694,21 @@ nav .fa-solid {
   .about-col-2 {
     font-size: 14px;
   }
-  .timeline {
+
+  .checkpoint p {
+    font-size: large;
+  }
+
+  .aboutme h2 {
+    opacity: 0;
+    transition: opacity 0.8s;
+  }
+
+  .aboutme h2.visible {
+    opacity: 1;
+  }
+
+  /* .timeline {
     width: 80vw;
   }
   .timeline .checkpoint {
@@ -715,7 +729,7 @@ nav .fa-solid {
     top: -0.5em;
     left: 50%;
     transform: translateX(-50%);
-  }
+  } */
 
   .tab-links {
     font-size: 16px;
@@ -752,18 +766,88 @@ nav .fa-solid {
     inset 0 0 20px #08f, 0 0 40px #08f, inset 0 0 40px #08f;
 }
 
-/* scroll animations */
-/* .hidden {
+.column-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+}
+.hidden {
   opacity: 0;
   filter: blur(10px);
-  transform: translateX(-100%);
+  transform: translateY(100%);
   transition: all 1.5s;
 }
 .show {
   opacity: 1;
   filter: blur(0);
-  transform: translateX(0);
+  transform: translateY(0);
+}
+.timeline {
+  /* background: #08f; */
+  height: 100%;
+  text-align: center;
+  line-height: 1.5;
+}
+.timeline .hidden {
+  margin-top: 150px;
+}
+.timeline p {
+  font-size: 20px;
+}
+/* .col-left {
+  background: #26ff00;
+}
+.col-right {
+  background: #26ff00;
 } */
+.hidden-right {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateX(100%);
+  transition: all 1.5s;
+  margin-top: 200px;
+}
+.col-right .hidden-right img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.hidden-left {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateX(-100%);
+  transition: all 1.5s;
+  margin-top: 200px;
+}
+.col-left .hidden-left img {
+  width: 100%;
+  border-radius: 20px;
+}
+.show-right-left {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+@media (max-width: 1000px) {
+  .column-container {
+    grid-template-columns: 1fr 2fr; /* Adjust to a single column layout */
+  }
+
+  .hidden-right {
+    display: none; /* Hide the left and right columns */
+  }
+}
+@media (max-width: 150px) {
+  .column-container {
+    grid-template-columns: 1fr; /* Adjust to a single column layout */
+  }
+
+  .hidden-left,
+  .hidden-right {
+    display: none; /* Hide the left and right columns */
+  }
+}
+/* scroll animations */
 
 /* popup */
 
