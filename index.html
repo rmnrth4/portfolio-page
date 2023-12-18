@@ -4,22 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="images/logo_rr.png">
+    <link rel="icon" href="images/logo_rr.png" />
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="lightbox.css">  <!-- Dies wird für die Foto Alben gebraucht -->
+    <link rel="stylesheet" href="lightbox.css" />
+    <!-- Dies wird für die Foto Alben gebraucht -->
     <script
       src="https://kit.fontawesome.com/6b1c268a23.js"
       crossorigin="anonymous"
     ></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-
   </head>
   <body>
-
     <div class="hero">
       <video autoplay loop muted plays-inline class="back-video">
-        <source src="images/Dolomites.m4v">
+        <source src="images/Dolomites.m4v" />
       </video>
       <nav>
         <img src="images/logo_rr.png" class="logo" />
@@ -34,140 +33,166 @@
         <i class="fa-solid fa-bars" onclick="openmenu()"></i>
       </nav>
       <!-- weather api -->
-        <div class="weather-card">
-          <div class="search">
-            <input type="text" placeholder="Enter City name" spellcheck="false">
-            <button class="get-location">
-              <i class="fa-solid fa-map-location"></i>
-            </button>
-            <button class="search-city">
-              <img src="images/weather/search.png">
-            </button>
-          </div>
-          <div class="location-error">
-            <p>Invalid city name / Location not found</p>
-          </div>
-          <div class="weather">
-            <img src="images/weather/rain.png" class="weather-icon">
-            <h1 class="temp">22°C</h1>
-            <h2 class="city">New York</h2>
-            <div class="details">
-              <div class="col">
-                <img src="images/weather/humidity.png">
-                <div>
+      <div class="weather-card">
+        <div class="search">
+          <input type="text" placeholder="Enter City name" spellcheck="false" />
+          <button class="get-location">
+            <i class="fa-solid fa-map-location"></i>
+          </button>
+          <button class="search-city">
+            <img src="images/weather/search.png" />
+          </button>
+        </div>
+        <div class="location-error">
+          <p>Invalid city name / Location not found</p>
+        </div>
+        <div class="weather">
+          <img src="images/weather/rain.png" class="weather-icon" />
+          <h1 class="temp">22°C</h1>
+          <h2 class="city">New York</h2>
+          <div class="details">
+            <div class="col">
+              <img src="images/weather/humidity.png" />
+              <div>
                 <p class="humidity">50%</p>
                 <p>Humidity</p>
-                </div>
               </div>
-              <div class="col">
-                <img src="images/weather/wind.png">
-                <div>
+            </div>
+            <div class="col">
+              <img src="images/weather/wind.png" />
+              <div>
                 <p class="wind">15km/h</p>
                 <p>Wind speed</p>
-                </div>
               </div>
             </div>
           </div>
         </div>
-      
+      </div>
+
       <div class="hero-row">
         <div class="hero-col-1">
-          <img src="images/mobi_pb_hoch.png" alt="">
+          <img src="images/mobi_pb_hoch.png" alt="" />
         </div>
 
         <div class="hero-col-2">
           <div class="hero-text">
-            <h1>Hi, I'm <span>Roman</span><br/> and I am a <span class="auto-type"></span></h1>
+            <h1>
+              Hi, I'm <span>Roman</span><br />
+              and I am a <span class="auto-type"></span>
+            </h1>
           </div>
         </div>
       </div>
-        
-            
     </div>
-
 
     <!-- ------------------------about--------------------- -->
     <div id="about">
       <div class="container">
-        
         <div class="column-container">
-
           <div class="col-left">
             <div class="hidden-left">
-              <img src="images/IMG_3056.JPG">
+              <img src="images/IMG_3056.JPG" />
             </div>
             <div class="hidden-left">
-              <img src="images/IMG_3056.JPG">
+              <img src="images/IMG_3056.JPG" />
             </div>
             <div class="hidden-left">
-              <img src="images/IMG_3056.JPG">
+              <img src="images/IMG_3056.JPG" />
             </div>
             <div class="hidden-left">
-              <img src="images/IMG_3056.JPG">
+              <img src="images/IMG_3056.JPG" />
             </div>
           </div>
-             
-          <div class="timeline">
+
+          <div class="aboutme-timeline">
             <h1 class="sub-title">About Me</h1>
             <div class="hidden">
               <div>
                 <h3>Hello, my name is Roman</h3>
               </div>
             </div>
-  
+
+            <div class="hidden">
+              <div>
+                <p>I'd like to tell you a few words about myself here.</p>
+              </div>
+            </div>
+
             <div class="hidden">
               <div>
                 <p>
-                  I'd like to tell you a few words about myself here. 
+                  I grew up in Rüderswil, a sleepy village in the heart of the
+                  beautiful Emmental. My father is a track fitter specialising
+                  in overhead lines and my mother works as a carer in a
+                  retirement home. I have one younger sister.
                 </p>
               </div>
             </div>
-              
+
             <div class="hidden">
               <div>
-                <p>I grew up in Rüderswil, a sleepy village in the heart of the beautiful Emmental. My father is a track fitter specialising in overhead lines and my mother works as a carer in a retirement home. I have one younger sister. </p>
+                <p>
+                  After my apprenticeship as a retail specialist, I completed my
+                  technical vocational baccalaureate in Langenthal. I then did
+                  my military service and gained professional experience as a
+                  retail specialist at Melectronics in various branches.
+                </p>
               </div>
             </div>
-  
+
             <div class="hidden">
               <div>
-                <p>After my apprenticeship as a retail specialist, I completed my technical vocational baccalaureate in Langenthal. I then did my military service and gained professional experience as a retail specialist at Melectronics in various branches. </p>
+                <p>
+                  Since autumn 2020, I have been studying business informatics
+                  at the Bern University of Applied Sciences (BFH) on a
+                  part-time basis.
+                </p>
               </div>
             </div>
-  
+
             <div class="hidden">
               <div>
-                <p>Since autumn 2020, I have been studying business informatics at the Bern University of Applied Sciences (BFH) on a part-time basis. </p>
+                <p>
+                  Outside of work, I love doing sports, discovering new places
+                  and spending time with my friends and family. I have been
+                  passionate about playing flag football since the summer of
+                  2021. My friends and I founded the flag football club "Aemme
+                  Buzzards". In addition to my sporting commitment, I am also a
+                  board member, where I take care of merchandise, marketing and
+                  sponsorship. In winter, you can often find me skiing in the
+                  Bernese Oberland. During the summer, I enjoy hiking, jogging
+                  and biking.
+                </p>
               </div>
             </div>
-  
             <div class="hidden">
               <div>
-                <p>Outside of work, I love doing sports, discovering new places and spending time with my friends and family. I have been passionate about playing flag football since the summer of 2021. My friends and I founded the flag football club "Aemme Buzzards". In addition to my sporting commitment, I am also a board member, where I take care of merchandise, marketing and sponsorship. In winter, you can often find me skiing in the Bernese Oberland. During the summer, I enjoy hiking, jogging and biking. </p>
-              </div>
-            </div>
-            <div class="hidden">
-              <div>
-                <p>I am also fascinated by discovering foreign cultures and countries. I have already had the opportunity to go on two longer trips. In 2018, I spent two months exploring the islands of Hawaii, and in 2022, I had the opportunity to spend a month travelling around Java, Bali and Lombok in Indonesia. </p>
+                <p>
+                  I am also fascinated by discovering foreign cultures and
+                  countries. I have already had the opportunity to go on two
+                  longer trips. In 2018, I spent two months exploring the
+                  islands of Hawaii, and in 2022, I had the opportunity to spend
+                  a month travelling around Java, Bali and Lombok in Indonesia.
+                </p>
               </div>
             </div>
           </div>
 
           <div class="col-right">
             <div class="hidden-right">
-              <img src="">
+              <img src="" />
             </div>
             <div class="hidden-right">
-              <img src="images/IMG_3056.JPG">
+              <img src="images/IMG_3056.JPG" />
             </div>
             <div class="hidden-right">
-              <img src="images/IMG_3056.JPG">
+              <img src="images/IMG_3056.JPG" />
             </div>
             <div class="hidden-right">
-              <img src="images/IMG_3056.JPG">
+              <img src="images/IMG_3056.JPG" />
             </div>
             <div class="hidden-right">
-              <img src="images/IMG_3056.JPG">
+              <img src="images/IMG_3056.JPG" />
             </div>
           </div>
         </div>
@@ -177,7 +202,7 @@
     <!-- -----------------myCV--------------------- -->
     <div id="myCV">
       <div class="container">
-        <div> 
+        <div>
           <h1 class="sub-title">My Curriculum Vitae</h1>
           <div class="tab-titles">
             <p class="tab-links active-link" onclick="opentab('skills')">
@@ -187,133 +212,239 @@
               <i class="fa-solid fa-trophy"></i> <span>Experience</span>
             </p>
             <p class="tab-links" onclick="opentab('education')">
-              <i class="fa-solid fa-graduation-cap"></i><span>Education</span></p>
+              <i class="fa-solid fa-graduation-cap"></i><span>Education</span>
+            </p>
           </div>
 
           <div class="tab-contents active-tab" id="skills">
-              <div class="maincontainer" id="flip-card">
-                <div class="card-container">
-                  <div class="thecard">
-                    <div class="thefront">
-                      <h2>HTML</h2>
-                      <i class="fa-brands fa-html5"></i>
-                    </div>
-                    <div class="theback">
-                      <p><strong>Experience:</strong></p><p> 3 Years</p>
-                      <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-xmark"><i class="fa-solid fa-square-xmark"></i></span></p>
-                      <p>During my bachelor's degree in business informatics, I've worked with HTML from time to time.</p>
-                    </div>
+            <div class="maincontainer" id="flip-card">
+              <div class="card-container">
+                <div class="thecard">
+                  <div class="thefront">
+                    <h2>HTML</h2>
+                    <i class="fa-brands fa-html5"></i>
                   </div>
-                  <div class="thecard">
-                    <div class="thefront">
-                      <h2>CSS</h2>
-                      <i class="fa-brands fa-css3-alt"></i>
-                    </div>
-                    <div class="theback">
-                      <p><strong>Experience:</strong></p><p> 3 Years</p>
-                      <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-xmark"><i class="fa-solid fa-square-xmark"></i></span></p>
-                      <p>During my bachelor's degree in business informatics, I've worked with CSS from time to time.</p>
-                    </div>
-                  </div>
-                  <div class="thecard">
-                    <div class="thefront">
-                      <h2>JavaScript</h2>
-                      <i class="fa-brands fa-js"></i>
-                    </div>
-                    <div class="theback">
-                      <p><strong>Experience:</strong></p><p> 3 Years</p>
-                      <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-xmark"><i class="fa-solid fa-square-xmark"></i></span></p>
-                      <p>During my bachelor's degree in business informatics, I've worked with JS from time to time.</p>
-                    </div>
-                  </div>
-                  <div class="thecard">
-                    <div class="thefront">
-                      <h2>SQL</h2>
-                      <img src="images/sql.png" />
-                    </div>
-                    <div class="theback">
-                      <p><strong>Experience:</strong></p><p> 3 Years</p>
-                      <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-check"><i class="fa-solid fa-square-check"></i></span></p>
-                      <p>During my bachelor's degree in business informatics, I've worked with SQL from time to time. I have been working with SAS enterprise guide from time to time since I joined La Mobiliére in August 2023</p>
-                    </div>
-                  </div>
-                  <div class="thecard">
-                    <div class="thefront">
-                      <h2>R</h2>
-                      <i class="fa-brands fa-r-project"></i>
-                    </div>
-                    <div class="theback">
-                      <p><strong>Experience:</strong></p><p> 3 Years</p>
-                      <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-xmark"><i class="fa-solid fa-square-xmark"></i></span></p>
-                      <p>During my bachelor's degree in business informatics, I've worked with R on many projects.</p>
-                    </div>
-                  </div>
-                  <div class="thecard">
-                    <div class="thefront">
-                      <h2>Python</h2>
-                      <i class="fa-brands fa-python"></i>
-                    </div>
-                    <div class="theback">
-                      <p><strong>Experience:</strong></p><p> 3 Years</p>
-                      <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-check"><i class="fa-solid fa-square-check"></i></span></p>
-                      <p>During my bachelor's degree in business informatics, I've worked with Python from time to time. I have been working with Python almost every day since I joined La Mobiliére in August 2023.</p>
-                    </div>
-                  </div>
-                  <div class="thecard">
-                    <div class="thefront">
-                      <h2>PySpark</h2>
-                      <img src="images/Apache_Spark.png" />
-                    </div>
-                    <div class="theback">
-                      <p><strong>Experience:</strong></p><p>< 1 Year</p>
-                      <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-check"><i class="fa-solid fa-square-check"></i></span></p>
-                      <p>During my bachelor's degree in business informatics, I've worked with Python from time to time. I have been working with Pyspark almost every day since I joined La Mobiliére in August 2023.
-                    </div>
-                  </div>
-                  <div class="thecard">
-                    <div class="thefront">
-                      <h2>VBA <br><br></h2>
-                      <img src="images/vba-logo.webp" />
-                    </div>
-                    <div class="theback">
-                      <p><strong>Experience:</strong></p><p>2 Years</p>
-                      <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-check"><i class="fa-solid fa-square-check"></i></span></p>
-                      <p>I've been working with Visual Basic for Applications during my time at Staatssekretariat für Migration.</p>
-                    </div>
+                  <div class="theback">
+                    <p><strong>Experience:</strong></p>
+                    <p>3 Years</p>
+                    <p><strong>Professional exp.:</strong></p>
+                    <p>
+                      <span class="checkmark-xmark"
+                        ><i class="fa-solid fa-square-xmark"></i
+                      ></span>
+                    </p>
+                    <p>
+                      During my bachelor's degree in business informatics, I've
+                      worked with HTML from time to time.
+                    </p>
                   </div>
                 </div>
+                <div class="thecard">
+                  <div class="thefront">
+                    <h2>CSS</h2>
+                    <i class="fa-brands fa-css3-alt"></i>
+                  </div>
+                  <div class="theback">
+                    <p><strong>Experience:</strong></p>
+                    <p>3 Years</p>
+                    <p><strong>Professional exp.:</strong></p>
+                    <p>
+                      <span class="checkmark-xmark"
+                        ><i class="fa-solid fa-square-xmark"></i
+                      ></span>
+                    </p>
+                    <p>
+                      During my bachelor's degree in business informatics, I've
+                      worked with CSS from time to time.
+                    </p>
+                  </div>
+                </div>
+                <div class="thecard">
+                  <div class="thefront">
+                    <h2>JavaScript</h2>
+                    <i class="fa-brands fa-js"></i>
+                  </div>
+                  <div class="theback">
+                    <p><strong>Experience:</strong></p>
+                    <p>3 Years</p>
+                    <p><strong>Professional exp.:</strong></p>
+                    <p>
+                      <span class="checkmark-xmark"
+                        ><i class="fa-solid fa-square-xmark"></i
+                      ></span>
+                    </p>
+                    <p>
+                      During my bachelor's degree in business informatics, I've
+                      worked with JS from time to time.
+                    </p>
+                  </div>
+                </div>
+                <div class="thecard">
+                  <div class="thefront">
+                    <h2>SQL</h2>
+                    <img src="images/sql.png" />
+                  </div>
+                  <div class="theback">
+                    <p><strong>Experience:</strong></p>
+                    <p>3 Years</p>
+                    <p><strong>Professional exp.:</strong></p>
+                    <p>
+                      <span class="checkmark-check"
+                        ><i class="fa-solid fa-square-check"></i
+                      ></span>
+                    </p>
+                    <p>
+                      During my bachelor's degree in business informatics, I've
+                      worked with SQL from time to time. I have been working
+                      with SAS enterprise guide from time to time since I joined
+                      La Mobiliére in August 2023
+                    </p>
+                  </div>
+                </div>
+                <div class="thecard">
+                  <div class="thefront">
+                    <h2>R</h2>
+                    <i class="fa-brands fa-r-project"></i>
+                  </div>
+                  <div class="theback">
+                    <p><strong>Experience:</strong></p>
+                    <p>3 Years</p>
+                    <p><strong>Professional exp.:</strong></p>
+                    <p>
+                      <span class="checkmark-xmark"
+                        ><i class="fa-solid fa-square-xmark"></i
+                      ></span>
+                    </p>
+                    <p>
+                      During my bachelor's degree in business informatics, I've
+                      worked with R on many projects.
+                    </p>
+                  </div>
+                </div>
+                <div class="thecard">
+                  <div class="thefront">
+                    <h2>Python</h2>
+                    <i class="fa-brands fa-python"></i>
+                  </div>
+                  <div class="theback">
+                    <p><strong>Experience:</strong></p>
+                    <p>3 Years</p>
+                    <p><strong>Professional exp.:</strong></p>
+                    <p>
+                      <span class="checkmark-check"
+                        ><i class="fa-solid fa-square-check"></i
+                      ></span>
+                    </p>
+                    <p>
+                      During my bachelor's degree in business informatics, I've
+                      worked with Python from time to time. I have been working
+                      with Python almost every day since I joined La Mobiliére
+                      in August 2023.
+                    </p>
+                  </div>
+                </div>
+                <div class="thecard">
+                  <div class="thefront">
+                    <h2>PySpark</h2>
+                    <img src="images/Apache_Spark.png" />
+                  </div>
+                  <div class="theback">
+                    <p><strong>Experience:</strong></p>
+                    <p>< 1 Year</p>
+                    <p><strong>Professional exp.:</strong></p>
+                    <p>
+                      <span class="checkmark-check"
+                        ><i class="fa-solid fa-square-check"></i
+                      ></span>
+                    </p>
+                    <p>
+                      During my bachelor's degree in business informatics, I've
+                      worked with Python from time to time. I have been working
+                      with Pyspark almost every day since I joined La Mobiliére
+                      in August 2023.
+                    </p>
+                  </div>
+                </div>
+                <div class="thecard">
+                  <div class="thefront">
+                    <h2>VBA <br /><br /></h2>
+                    <img src="images/vba-logo.webp" />
+                  </div>
+                  <div class="theback">
+                    <p><strong>Experience:</strong></p>
+                    <p>2 Years</p>
+                    <p><strong>Professional exp.:</strong></p>
+                    <p>
+                      <span class="checkmark-check"
+                        ><i class="fa-solid fa-square-check"></i
+                      ></span>
+                    </p>
+                    <p>
+                      I've been working with Visual Basic for Applications
+                      during my time at Staatssekretariat für Migration.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="tab-contents" id="experience">
-            <ul>
-              <li>
-                <span>2023 - Current</span><br />Software Engineer at la
-                Mobiliere
-              </li>
-              <li><span>2021 - 2023</span><br />Software Testing at SEM</li>
-              <li>
-                <span>2010 - 2021</span><br />Retail Assistant at Melectronics
-              </li>
-            </ul>
-          </div>
-          <div class="tab-contents" id="education">
-            <ul>
-              <li>
-                <span>2020 - Current</span><br />Bachelor Business Informatics
-              </li>
-              <li><span>2015 - 2016</span><br />Berufsmatur</li>
-              <li>
-                <span>2012 - 2015</span><br />Apprentiship as Retail Assistant
-              </li>
-            </ul>
+            <div class="timeline">
+              <div class="checkpoint">
+                <div>
+                  <h2>2023 - Current</h2>
+                  <p>Software Engineer at la Mobiliere</p>
+                </div>
+              </div>
+              <div class="checkpoint">
+                <div>
+                  <h2>2021 - 2023</h2>
+                  <p>Software Testing at SEM</p>
+                </div>
+              </div>
+              <div class="checkpoint">
+                <div>
+                  <h2>2010 - 2021</h2>
+                  <p>Retail Assistant at Melectronics</p>
+                </div>
+              </div>
+              <div class="checkpoint">
+                <div>
+                  <h2>2023</h2>
+                  <p></p>
+                </div>
+                </div>
+              </div>
+
+              <ul>
+                <li>
+                  <span>2023 - Current</span><br />Software Engineer at la
+                  Mobiliere
+                </li>
+                <li><span>2021 - 2023</span><br />Software Testing at SEM</li>
+                <li>
+                  <span>2010 - 2021</span><br />Retail Assistant at Melectronics
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2020 - Current</span><br />Bachelor Business Informatics
+                </li>
+                <li><span>2015 - 2016</span><br />Berufsmatur</li>
+                <li>
+                  <span>2012 - 2015</span><br />Apprentiship as Retail Assistant
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- ------------- portfolio---------------- -->
-    <div id="portfolio">
-      <!-- <div class="popup" id="popup">
+      <!-- ------------- portfolio---------------- -->
+      <div id="portfolio">
+        <!-- <div class="popup" id="popup">
         <h1>Hello thanks for opening</h1>
         <button type="button" onclick="closePopup()">Ok</button> -->
       </div>
@@ -324,12 +455,11 @@
             <img src="images/IMG_3056.JPG" />
             <div class="layer">
               <h3>Hawaii</h3>
-              <p>
-                Bilder von Hawaii
-              </p>
-              <a onclick="toggle()" href="#non_visibile"><i class="fa-solid fa-up-right-from-square"></i></a>
+              <p>Bilder von Hawaii</p>
+              <a onclick="toggle()" href="#non_visibile"
+                ><i class="fa-solid fa-up-right-from-square"></i
+              ></a>
               <!-- <a onclick="openPopup()" href="#portfolio"><i class="fa-solid fa-up-right-from-square"></i></a> -->
-
             </div>
           </div>
           <div class="work">
@@ -355,7 +485,7 @@
             </div>
           </div>
         </div>
-        <a  class="btn">See more</a>
+        <a class="btn">See more</a>
       </div>
     </div>
 
@@ -367,29 +497,61 @@
     <!-- hidden section -->
     <div id="non_visibile" class="not-visible">
       <div class="gallery">
-        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
-          <img src="images/DSC_0456.JPG">
+        <a
+          href="images/DSC_0456.JPG"
+          data-lightbox="travel"
+          data-title="Caption1"
+        >
+          <img src="images/DSC_0456.JPG" />
         </a>
-        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
-          <img src="images/DSC_0456.JPG">
+        <a
+          href="images/DSC_0456.JPG"
+          data-lightbox="travel"
+          data-title="Caption1"
+        >
+          <img src="images/DSC_0456.JPG" />
         </a>
-        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
-          <img src="images/DSC_0456.JPG">
+        <a
+          href="images/DSC_0456.JPG"
+          data-lightbox="travel"
+          data-title="Caption1"
+        >
+          <img src="images/DSC_0456.JPG" />
         </a>
-        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
-          <img src="images/DSC_0456.JPG">
+        <a
+          href="images/DSC_0456.JPG"
+          data-lightbox="travel"
+          data-title="Caption1"
+        >
+          <img src="images/DSC_0456.JPG" />
         </a>
-        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
-          <img src="images/DSC_0456.JPG">
+        <a
+          href="images/DSC_0456.JPG"
+          data-lightbox="travel"
+          data-title="Caption1"
+        >
+          <img src="images/DSC_0456.JPG" />
         </a>
-        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
-          <img src="images/DSC_0456.JPG">
+        <a
+          href="images/DSC_0456.JPG"
+          data-lightbox="travel"
+          data-title="Caption1"
+        >
+          <img src="images/DSC_0456.JPG" />
         </a>
-        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
-          <img src="images/DSC_0456.JPG">
+        <a
+          href="images/DSC_0456.JPG"
+          data-lightbox="travel"
+          data-title="Caption1"
+        >
+          <img src="images/DSC_0456.JPG" />
         </a>
-        <a href="images/DSC_0456.JPG" data-lightbox="travel" data-title="Caption1">
-          <img src="images/DSC_0456.JPG">
+        <a
+          href="images/DSC_0456.JPG"
+          data-lightbox="travel"
+          data-title="Caption1"
+        >
+          <img src="images/DSC_0456.JPG" />
         </a>
       </div>
     </div>
@@ -400,8 +562,12 @@
         <div class="row">
           <div class="contact-left">
             <h1 class="sub-title">Contact Me</h1>
-            <a href="mailto:romanroth44@gmail.com"><i class="fa-regular fa-paper-plane"></i>romanroth44@gmail.com</a>
-            <a href="tel:+41793242340"><i class="fa-solid fa-square-phone"></i>079 324 23 40</a>
+            <a href="mailto:romanroth44@gmail.com"
+              ><i class="fa-regular fa-paper-plane"></i>romanroth44@gmail.com</a
+            >
+            <a href="tel:+41793242340"
+              ><i class="fa-solid fa-square-phone"></i>079 324 23 40</a
+            >
             <div class="social-icons">
               <a href="https://www.instagram.com/rom4nr/"
                 ><i class="fa-brands fa-instagram"></i
@@ -413,13 +579,26 @@
                 <i class="fa-brands fa-github"></i>
               </a>
             </div>
-            <a href="images/IMG_4625.JPG" download class="btn btn2">Download CV</a>
+            <a href="images/IMG_4625.JPG" download class="btn btn2"
+              >Download CV</a
+            >
           </div>
           <div class="contact-right">
-
-            <form name="submit-to-mail"; onsubmit=sendEmail(); reset(); return false;>
-              <input type="text" id="Name" placeholder="Your Name" required/>
-              <input type="email" id="Email" placeholder="Your Email" required/>
+            <form
+              name="submit-to-mail"
+              ;
+              onsubmit="sendEmail();"
+              reset();
+              return
+              false;
+            >
+              <input type="text" id="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                id="Email"
+                placeholder="Your Email"
+                required
+              />
               <textarea
                 id="Message"
                 rows="6"
@@ -434,14 +613,6 @@
         </div>
       </div>
     </div>
-
-    
-    
-    
-
-    
-
-
 
     <!-- API -->
     <!-- <div class="api">
@@ -461,7 +632,6 @@
       </table>
     </div> -->
 
-
     <div class="copyright">
       <p>Copyright © Roman Roth.<i class="fa-regular fa-heart"></i></p>
     </div>
@@ -475,12 +645,19 @@
 
     <script>
       var typed = new Typed(".auto-type", {
-        strings: ["videographer", "runner", "student", "skier", "programmer", "traveler", "biker"],
+        strings: [
+          "videographer",
+          "runner",
+          "student",
+          "skier",
+          "programmer",
+          "traveler",
+          "biker",
+        ],
         typeSpeed: 150,
         backSpeed: 150,
         loop: true,
       });
-      
     </script>
     <!-- ["videographer",], -->
   </body>
