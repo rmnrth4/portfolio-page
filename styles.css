@@ -488,30 +488,42 @@ nav ul li a:hover::after {
 } */
 
 .tab-titles {
+  padding: 30px 0;
   display: flex;
-  margin: 20px 0 40px;
+  justify-content: space-between;
 }
 .tab-links {
-  margin-right: 50px;
-  font-size: 18px;
+  width: calc(33.33% - 20px);
+  font-size: 2.5vw;
   font-weight: 500;
   cursor: pointer;
   position: relative;
+  padding: 40px;
+  background: #262626;
+  color: #fff;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+}
+.tab-links i {
+  margin-right: 5%;
+}
+.tab-links:hover {
+  background: #ab0909;
+  transform: translateY(-10px);
 }
 .tab-links::after {
-  content: "";
-  width: 0;
-  height: 3px;
+  transform: translateY(-10px);
   background: #ab0909;
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  transition: 0.5s;
 }
 
+.tab-links.active-link {
+  background: #ab0909;
+  transform: translateY(-10px);
+}
+/*
 .tab-links.active-link::after {
   width: 50%;
-}
+} */
 
 .tab-contents ul li {
   list-style: none;
@@ -528,7 +540,120 @@ nav ul li a:hover::after {
 .tab-contents.active-tab {
   display: block;
 }
+@media (max-width: 750px) {
+  .tab-links {
+    width: calc(33.33% - 20px); /* Adjust width for smaller screens */
+    padding: 20px;
+  }
 
+  .tab-links i {
+    font-size: 20px;
+  }
+  .tab-links .fa-solid::before {
+    display: inline;
+  }
+  .tab-links span {
+    display: none;
+  }
+}
+
+/* .maincontainer .heading {
+  text-align: center;
+  padding-bottom: 15px;
+  color: white;
+} */
+.maincontainer {
+  box-sizing: border-box;
+  padding-bottom: 100px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.thecard {
+  margin-bottom: 40px;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  color: #fff;
+  width: 250px;
+  height: 250px;
+}
+
+.thecard:hover {
+  transform: rotateY(180deg);
+}
+
+.thecard .thefront,
+.thecard .theback {
+  position: absolute;
+  font-size: 13px;
+  font-weight: 300;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.thefront {
+  padding: 40px;
+  background: #ab0909;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.theback {
+  padding: 20px;
+  background: #262626;
+  transform: rotateY(180deg);
+  text-align: left;
+  line-height: 1.5;
+}
+.theback p {
+  display: inline-block; /* Displaying the experience details inline */
+  margin-left: 5px;
+}
+.theback p strong {
+  font-size: 16px;
+  color: #ab0909;
+}
+.theback p i {
+  font-size: 20px;
+}
+.checkmark-check {
+  font-size: 5px;
+  color: #26ff00;
+}
+.checkmark-xmark {
+  font-size: 5px;
+  color: red;
+}
+.thecard h2 {
+  font-size: 30px;
+  font-weight: 500;
+}
+.thecard i {
+  font-size: 150px;
+  margin-bottom: 30px;
+}
+.thecard img {
+  max-height: 130px;
+  max-width: 200px;
+}
+@media (max-width: 655px) {
+  .card-container {
+    justify-content: center;
+  }
+  .thecard {
+    margin-bottom: 20px;
+  }
+}
 /* ---------------- services ------------------ */
 #services {
   padding: 30px 0;
@@ -909,91 +1034,6 @@ nav .fa-solid {
 .gallery img {
   width: 100%;
   border-radius: 6px;
-}
-
-.maincontainer {
-  box-sizing: border-box;
-  background-color: #080808;
-  padding: 15px 9%;
-  padding-bottom: 100px;
-}
-.maincontainer .heading {
-  text-align: center;
-  padding-bottom: 15px;
-  color: white;
-}
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 15px;
-}
-
-.thecard {
-  transform-style: preserve-3d;
-  transition: all 0.5s ease;
-  color: #fff;
-  width: 250px;
-  height: 250px;
-}
-
-.thecard:hover {
-  transform: rotateY(180deg);
-}
-
-.thecard .thefront,
-.thecard .theback {
-  position: absolute;
-  font-size: 13px;
-  font-weight: 300;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 10px;
-}
-
-.thefront {
-  padding: 40px;
-  background: #ab0909;
-  text-align: center;
-}
-
-.theback {
-  padding: 20px;
-  background: #262626;
-  transform: rotateY(180deg);
-  text-align: left;
-  line-height: 1.5;
-}
-.theback p {
-  display: inline-block; /* Displaying the experience details inline */
-  margin-left: 5px;
-}
-.theback p strong {
-  font-size: 16px;
-  color: #ab0909;
-}
-.theback p i {
-  font-size: 20px;
-}
-.checkmark-check {
-  font-size: 5px;
-  color: #26ff00;
-}
-.checkmark-xmark {
-  font-size: 5px;
-  color: red;
-}
-.thecard h2 {
-  font-size: 30px;
-  font-weight: 500;
-}
-.thecard i {
-  font-size: 150px;
-  margin-bottom: 30px;
-}
-.thecard img {
-  max-height: 130px;
-  max-width: 200px;
 }
 
 /* titel California */

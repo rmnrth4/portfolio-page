@@ -26,7 +26,7 @@
         <ul id="sidemenu">
           <li><a href="#">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
+          <li><a href="#myCV">CV</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
           <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
@@ -170,31 +170,119 @@
               <img src="images/IMG_3056.JPG">
             </div>
           </div>
-
         </div>
+      </div>
+    </div>
 
-        
+    <!-- -----------------myCV--------------------- -->
+    <div id="myCV">
+      <div class="container">
         <div> 
           <h1 class="sub-title">My Curriculum Vitae</h1>
           <div class="tab-titles">
             <p class="tab-links active-link" onclick="opentab('skills')">
-              Skills
+              <i class="fa-solid fa-code"></i> <span>Skills</span>
             </p>
             <p class="tab-links" onclick="opentab('experience')">
-              Experience
+              <i class="fa-solid fa-trophy"></i> <span>Experience</span>
             </p>
-            <p class="tab-links" onclick="opentab('education')">Education</p>
+            <p class="tab-links" onclick="opentab('education')">
+              <i class="fa-solid fa-graduation-cap"></i><span>Education</span></p>
           </div>
 
           <div class="tab-contents active-tab" id="skills">
-            <ul>
-              <li><span>UI/UX</span><br />Designing Webb/App interfaces</li>
-              <li><span>Data Analysis</span><br />Business Data Analysis</li>
-              <li>
-                <span>Azure Databricks</span><br />Working with Azure
-                Databricks
-              </li>
-            </ul>
+              <div class="maincontainer" id="flip-card">
+                <div class="card-container">
+                  <div class="thecard">
+                    <div class="thefront">
+                      <h2>HTML</h2>
+                      <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <div class="theback">
+                      <p><strong>Experience:</strong></p><p> 3 Years</p>
+                      <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-xmark"><i class="fa-solid fa-square-xmark"></i></span></p>
+                      <p>During my bachelor's degree in business informatics, I've worked with HTML from time to time.</p>
+                    </div>
+                  </div>
+                  <div class="thecard">
+                    <div class="thefront">
+                      <h2>CSS</h2>
+                      <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+                    <div class="theback">
+                      <p><strong>Experience:</strong></p><p> 3 Years</p>
+                      <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-xmark"><i class="fa-solid fa-square-xmark"></i></span></p>
+                      <p>During my bachelor's degree in business informatics, I've worked with CSS from time to time.</p>
+                    </div>
+                  </div>
+                  <div class="thecard">
+                    <div class="thefront">
+                      <h2>JavaScript</h2>
+                      <i class="fa-brands fa-js"></i>
+                    </div>
+                    <div class="theback">
+                      <p><strong>Experience:</strong></p><p> 3 Years</p>
+                      <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-xmark"><i class="fa-solid fa-square-xmark"></i></span></p>
+                      <p>During my bachelor's degree in business informatics, I've worked with JS from time to time.</p>
+                    </div>
+                  </div>
+                  <div class="thecard">
+                    <div class="thefront">
+                      <h2>SQL</h2>
+                      <img src="images/sql.png" />
+                    </div>
+                    <div class="theback">
+                      <p><strong>Experience:</strong></p><p> 3 Years</p>
+                      <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-check"><i class="fa-solid fa-square-check"></i></span></p>
+                      <p>During my bachelor's degree in business informatics, I've worked with SQL from time to time. I have been working with SAS enterprise guide from time to time since I joined La Mobiliére in August 2023</p>
+                    </div>
+                  </div>
+                  <div class="thecard">
+                    <div class="thefront">
+                      <h2>R</h2>
+                      <i class="fa-brands fa-r-project"></i>
+                    </div>
+                    <div class="theback">
+                      <p><strong>Experience:</strong></p><p> 3 Years</p>
+                      <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-xmark"><i class="fa-solid fa-square-xmark"></i></span></p>
+                      <p>During my bachelor's degree in business informatics, I've worked with R on many projects.</p>
+                    </div>
+                  </div>
+                  <div class="thecard">
+                    <div class="thefront">
+                      <h2>Python</h2>
+                      <i class="fa-brands fa-python"></i>
+                    </div>
+                    <div class="theback">
+                      <p><strong>Experience:</strong></p><p> 3 Years</p>
+                      <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-check"><i class="fa-solid fa-square-check"></i></span></p>
+                      <p>During my bachelor's degree in business informatics, I've worked with Python from time to time. I have been working with Python almost every day since I joined La Mobiliére in August 2023.</p>
+                    </div>
+                  </div>
+                  <div class="thecard">
+                    <div class="thefront">
+                      <h2>PySpark</h2>
+                      <img src="images/Apache_Spark.png" />
+                    </div>
+                    <div class="theback">
+                      <p><strong>Experience:</strong></p><p>< 1 Year</p>
+                      <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-check"><i class="fa-solid fa-square-check"></i></span></p>
+                      <p>During my bachelor's degree in business informatics, I've worked with Python from time to time. I have been working with Pyspark almost every day since I joined La Mobiliére in August 2023.
+                    </div>
+                  </div>
+                  <div class="thecard">
+                    <div class="thefront">
+                      <h2>VBA <br><br></h2>
+                      <img src="images/vba-logo.webp" />
+                    </div>
+                    <div class="theback">
+                      <p><strong>Experience:</strong></p><p>2 Years</p>
+                      <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-check"><i class="fa-solid fa-square-check"></i></span></p>
+                      <p>I've been working with Visual Basic for Applications during my time at Staatssekretariat für Migration.</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
           </div>
           <div class="tab-contents" id="experience">
             <ul>
@@ -218,45 +306,6 @@
                 <span>2012 - 2015</span><br />Apprentiship as Retail Assistant
               </li>
             </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- -----------------services--------------------- -->
-    <div id="services">
-      <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-          <div>
-            <i class="fa-solid fa-code"></i>
-            <h2>Web Design</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua.
-            </p>
-            <a href="#">Learn more</a>
-          </div>
-          <div>
-            <i class="fa-solid fa-crop"></i>
-            <h2>Data Analysis</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua.
-            </p>
-            <a href="#">Learn more</a>
-          </div>
-          <div>
-            <i class="fa-solid fa-shuttle-space"></i>
-            <h2>App Design</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua.
-            </p>
-            <a href="#">Learn more</a>
           </div>
         </div>
       </div>
@@ -390,111 +439,7 @@
     
     
 
-    <!-- css flip card effect -->
-    <div class="maincontainer" id="flip-card">
-        <h1 class="heading">Cards</h1>
-        <div class="card-container">
-
-          <div class="thecard">
-            <div class="thefront">
-              <h2>HTML</h2>
-              <i class="fa-brands fa-html5"></i>
-            </div>
-            <div class="theback">
-              <p><strong>Experience:</strong></p><p> 3 Years</p>
-              <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-xmark"><i class="fa-solid fa-square-xmark"></i></span></p>
-              <p>During my bachelor's degree in business informatics, I've worked with HTML from time to time.</p>
-            </div>
-          </div>
-          <div class="thecard">
-            <div class="thefront">
-              <h2>CSS</h2>
-              <i class="fa-brands fa-css3-alt"></i>
-            </div>
-            <div class="theback">
-              <p><strong>Experience:</strong></p><p> 3 Years</p>
-              <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-xmark"><i class="fa-solid fa-square-xmark"></i></span></p>
-              <p>During my bachelor's degree in business informatics, I've worked with CSS from time to time.</p>
-            </div>
-          </div>
-          <div class="thecard">
-            <div class="thefront">
-              <h2>JavaScript</h2>
-              <i class="fa-brands fa-js"></i>
-            </div>
-            <div class="theback">
-              <p><strong>Experience:</strong></p><p> 3 Years</p>
-              <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-xmark"><i class="fa-solid fa-square-xmark"></i></span></p>
-              <p>During my bachelor's degree in business informatics, I've worked with JS from time to time.</p>
-            </div>
-          </div>
-          <div class="thecard">
-            <div class="thefront">
-              <h2>SQL</h2>
-              <img src="images/sql.png" />
-            </div>
-            <div class="theback">
-              <p><strong>Experience:</strong></p><p> 3 Years</p>
-              <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-check"><i class="fa-solid fa-square-check"></i></span></p>
-              <p>During my bachelor's degree in business informatics, I've worked with SQL from time to time. I have been working with SAS enterprise guide from time to time since I joined La Mobiliére in August 2023</p>
-            </div>
-          </div>
-          <div class="thecard">
-            <div class="thefront">
-              <h2>R</h2>
-              <i class="fa-brands fa-r-project"></i>
-            </div>
-            <div class="theback">
-              <p><strong>Experience:</strong></p><p> 3 Years</p>
-              <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-xmark"><i class="fa-solid fa-square-xmark"></i></span></p>
-              <p>During my bachelor's degree in business informatics, I've worked with R on many projects.</p>
-            </div>
-          </div>
-          <div class="thecard">
-            <div class="thefront">
-              <h2>Python</h2>
-              <i class="fa-brands fa-python"></i>
-            </div>
-            <div class="theback">
-              <p><strong>Experience:</strong></p><p> 3 Years</p>
-              <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-check"><i class="fa-solid fa-square-check"></i></span></p>
-              <p>During my bachelor's degree in business informatics, I've worked with Python from time to time. I have been working with Python almost every day since I joined La Mobiliére in August 2023.</p>
-            </div>
-          </div>
-          <div class="thecard">
-            <div class="thefront">
-              <h2>PySpark</h2>
-              <img src="images/Apache_Spark.png" />
-            </div>
-            <div class="theback">
-              <p><strong>Experience:</strong></p><p>< 1 Year</p>
-              <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-check"><i class="fa-solid fa-square-check"></i></span></p>
-              <p>During my bachelor's degree in business informatics, I've worked with Python from time to time. I have been working with Pyspark almost every day since I joined La Mobiliére in August 2023.
-            </div>
-          </div>
-          <div class="thecard">
-            <div class="thefront">
-              <h2>VBA</h2>
-              <img src="images/vba-logo.webp" />
-            </div>
-            <div class="theback">
-              <p><strong>Experience:</strong></p><p>2 Years</p>
-              <p><strong>Professional exp.:</strong></p> <p><span class="checkmark-check"><i class="fa-solid fa-square-check"></i></span></p>
-              <p>I've been working with Visual Basic for Applications during my time at Staatssekretariat für Migration.</p>
-            </div>
-            
-          </div>
-
-
-
-
-        </div>
-
-          
-
-        
     
-    </div>
 
 
 
