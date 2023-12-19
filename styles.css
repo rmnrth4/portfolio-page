@@ -465,14 +465,14 @@ nav ul li a:hover::after {
   width: 50%;
 } */
 
-.tab-contents ul li {
+/* .tab-contents ul li {
   list-style: none;
   margin: 10px 0;
 }
 .tab-contents ul li span {
   color: #cf2b2b;
   font-size: 14px;
-}
+} */
 
 .tab-contents {
   display: none;
@@ -631,7 +631,7 @@ nav ul li a:hover::after {
 
 .timeline {
   /* background: #08f; */
-  margin: 5em auto;
+  margin: 1em auto;
   max-width: 600px;
 }
 .checkpoint {
