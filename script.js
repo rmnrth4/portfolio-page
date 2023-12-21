@@ -116,17 +116,9 @@ const observerhiddenleft = new IntersectionObserver((entries) => {
     }
   });
 });
+
 const hiddenLeftElements = document.querySelectorAll(".hidden-left");
 hiddenLeftElements.forEach((el) => observerhiddenleft.observe(el));
-// // popup
-// let popup = document.getElementById("popup");
-
-// function openPopup() {
-//   popup.classList.add("open-popup");
-// }
-// function closePopup() {
-//   popup.classList.remove("open-popup");
-// }
 
 function toggle() {
   var x = document.getElementById("non_visibile");
