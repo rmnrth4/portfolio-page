@@ -46,22 +46,25 @@ nav ul li {
 
 nav ul li a {
   color: #fff;
+  font-weight: 800;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   position: relative;
 }
 nav ul li a::after {
   content: "";
   width: 0;
-  height: 3px;
+  height: 30px;
   background: #ab0909;
   position: absolute;
-  left: 0;
-  bottom: -6px;
+  left: -10px;
+  bottom: -4px;
   transition: 0.5s;
+  border-radius: 20px;
+  z-index: -1;
 }
 nav ul li a:hover::after {
-  width: 100%;
+  width: calc(100% + 20px);
 }
 
 /*  weather api */
@@ -69,14 +72,16 @@ nav ul li a:hover::after {
 .weather-card {
   position: absolute;
   right: 10%;
-  top: calc(3% + 10px);
+  top: calc(1% + 10px);
   width: 450px;
   max-width: 100%;
 
   /* max-width: 345px; */
   /* padding: 25px; */
   /* background: linear-gradient(135deg, #00feba, #5b548a); */
-  background: linear-gradient(180deg, #ab0909, #ebb434);
+  /* background: linear-gradient(180deg, #ab0909, #ebb434); rgba(255,255,255,0.5) */
+  background: rgba(255, 255, 255, 0.5);
+  border: solid 3px #fff;
   color: #fff;
   margin: 6% auto 0;
   border-radius: 40px;
@@ -84,7 +89,7 @@ nav ul li a:hover::after {
   text-align: center;
 
   @media screen and (max-width: 1400px) {
-    top: calc(8% + 20px);
+    top: calc(4% + 20px);
   }
 }
 .weather-card .search {
@@ -97,7 +102,7 @@ nav ul li a:hover::after {
 .weather-card .search input {
   border: 0;
   outline: 0;
-  background: #ebfffc;
+  background: #fff;
   color: #555;
   height: 60px;
   border-radius: 30px;
@@ -110,7 +115,7 @@ nav ul li a:hover::after {
 .weather-card .search button {
   border: 0;
   outline: 0;
-  background: #ebfffc;
+  background: #fff;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -172,7 +177,7 @@ nav ul li a:hover::after {
   display: none;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 1400px) {
   .weather-card {
     top: calc(10% + 10px);
     max-width: 345px;
@@ -222,14 +227,12 @@ nav ul li a:hover::after {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* background-color: #ebb434; */
   position: absolute;
   padding: 0px 10%;
   bottom: 60px;
 }
 .hero-col-1 {
   flex-basis: 16%;
-  /* background-color: #61b; */
   position: relative;
 }
 .hero-col-1 img {
@@ -239,7 +242,6 @@ nav ul li a:hover::after {
 }
 .hero-col-2 {
   flex-basis: 83%;
-  /* background-color: #61b752; */
   position: relative;
 }
 .hero-col-2 .hero-text {
@@ -260,7 +262,7 @@ nav ul li a:hover::after {
   .hero-row {
     height: auto;
     flex-direction: column;
-    bottom: 60;
+    bottom: 20px;
   }
   .hero-col-1 {
     order: 0;
@@ -306,29 +308,23 @@ nav ul li a:hover::after {
 .container {
   padding: 10px 10%;
 }
-
-/*------------------------about---------------------*/
-#about {
-  padding: 80px 0;
-  color: #ababab;
-}
-.row {
-  line-height: 1.3;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
 .sub-title {
-  font: 60px;
+  font-size: 80px;
   font-weight: 600;
   color: #fff;
 }
+/*------------------------about---------------------*/
+#about {
+  padding: 100px 0;
+  color: #ababab;
+}
+
 .column-container {
+  padding: 50px 0;
   min-height: 100%;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   gap: 20px;
-  margin-bottom: 200px;
 }
 .hidden {
   opacity: 0;
@@ -402,14 +398,14 @@ nav ul li a:hover::after {
   }
 }
 /* ------------- portfolio---------------- */
-#portfolio {
-  padding: 50px 0;
+#travelHL {
+  padding: 100px 0;
 }
 .work-list {
+  padding: 50px 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 40px;
-  margin-top: 50px;
 }
 .work {
   border-radius: 10px;
@@ -440,8 +436,8 @@ nav ul li a:hover::after {
   font-size: 14px;
   transition: height 0.5s;
 }
-.layer h3 {
-  font-weight: 500;
+.layer h2 {
+  font-weight: 600;
   margin-bottom: 20px;
 }
 .layer i {
@@ -465,16 +461,17 @@ nav ul li a:hover::after {
 
 /* ---------------- cv ------------------ */
 #myCV {
-  padding: 30px 0;
+  padding: 100px 0;
 }
 
 .tab-titles {
-  padding: 30px 0;
+  padding: 50px 0;
   display: flex;
   justify-content: space-between;
 }
 .tab-links {
   width: calc(33.33% - 20px);
+  text-align: center;
   font-size: 2.5vw;
   font-weight: 500;
   cursor: pointer;
@@ -482,9 +479,11 @@ nav ul li a:hover::after {
   padding: 40px;
   background: #262626;
   color: #fff;
-  border-radius: 10px;
+  border: 3px solid #ab0909;
+  border-radius: 100px;
   transition: background 0.5s, transform 0.5s;
 }
+
 .tab-links i {
   margin-right: 5%;
 }
@@ -526,7 +525,6 @@ nav ul li a:hover::after {
 
 .maincontainer {
   box-sizing: border-box;
-  padding-bottom: 100px;
 }
 
 .card-container {
@@ -537,7 +535,6 @@ nav ul li a:hover::after {
 }
 
 .thecard {
-  margin-bottom: 40px;
   box-sizing: border-box;
   transform-style: preserve-3d;
   transition: all 0.5s ease;
@@ -709,8 +706,15 @@ nav ul li a:hover::after {
 }
 
 /* ----------- contact -------------- */
-.contact {
-  padding: 50px 10%;
+#contact {
+  padding: 100px 0;
+}
+.row {
+  line-height: 1.3;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px 0;
 }
 .contact-left {
   flex-basis: 25%;
@@ -718,35 +722,47 @@ nav ul li a:hover::after {
 .contact-right {
   flex-basis: 70%;
 }
-
-.contact-left a {
+.mail-phone {
+  /* text-align: center; */
+  font-size: 20px;
+}
+.mail-phone a {
   display: block;
   color: #fff;
-  margin: 30px 0 5px;
+  margin: 15px 0;
   text-decoration: none;
+  background: #262626;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50px;
 }
-.contact-left a i {
+.mail-phone a i {
   color: #ab0909;
-  margin-right: 15px;
-  font-size: 25px;
+  margin-right: 5%;
+  font-size: 30px;
 }
 .social-icons {
-  margin-top: 30px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
+
 .social-icons a {
   text-decoration: none;
-  font-size: 30px;
-  margin-right: 15px;
-  color: #ababab;
-  display: inline-block;
+  font-size: 50px;
+  color: #fff;
   transition: transform 0.5s;
 }
+
 .social-icons a:hover {
   color: #ab0909;
   transform: translateY(-5px);
 }
 
 .btn {
+  font-size: 20px;
   display: block;
   margin: 50px auto;
   width: fit-content;
@@ -773,20 +789,19 @@ form textarea {
   padding: 15px;
   margin: 15px 0;
   color: #fff;
-  font-size: 18px;
+  font-size: 20px;
   border-radius: 6px;
 }
 
 .sub-btn {
   display: block;
   margin-top: 10px;
-  margin-bottom: 50px;
   background: #080808;
   color: #fff;
   border: 3px solid #ab0909;
   padding: 14px 35px;
   border-radius: 50px;
-  font-size: 16px;
+  font-size: 20px;
   transition: background 0.5s;
   cursor: pointer;
 }
@@ -852,16 +867,6 @@ nav .fa-solid {
   }
   .sub-title {
     font-size: 40px;
-  }
-  .about-col-1,
-  .about-col-2 {
-    flex-basis: 100%;
-  }
-  .about-col-1 {
-    margin-bottom: 30px;
-  }
-  .about-col-2 {
-    font-size: 14px;
   }
 
   .checkpoint p {
