@@ -834,8 +834,8 @@ nav .fa-solid {
     background: #ab0909;
     position: fixed;
     top: 0;
-    right: -130px;
-    width: 130px;
+    right: -200px;
+    width: 200px;
     height: 100vh;
     padding-top: 50px;
     z-index: 2;

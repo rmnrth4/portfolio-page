@@ -1,24 +1,3 @@
-// aboutme text
-// const h2s = document.querySelectorAll(".aboutme h2");
-
-// const beobachter = new IntersectionObserver(
-//   (entries) => {
-//     for (const entry of entries) {
-//       if (entry.isIntersecting) {
-//         entry.target.classList.add("visible");
-//       } else {
-//         entry.target.classList.remove("visible");
-//       }
-//     }
-//   },
-//   {
-//     threshold: 1.0,
-//     rootMargin: "20%",
-//   }
-// );
-
-// h2s.forEach((h2) => beobachter.observe(h2));
-
 // about-me tabs
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
@@ -39,13 +18,15 @@ function openmenu() {
   sidemenu.style.right = "0";
 }
 function closemenu() {
-  sidemenu.style.right = "-130px";
+  sidemenu.style.right = "-200px";
 }
 
 // contact form
 // https://www.youtube.com/watch?v=sGQSz22U8VM
 // https://smtpjs.com/
 // Email API: https://app.elasticemail.com/api/settings
+
+// import { MAILTOKEN } from "./API_keys.js";
 
 const form = document.forms["submit-to-mail"];
 const msg = document.getElementById("msg");
@@ -57,7 +38,7 @@ function sendEmail() {
     From: "romanroth44@gmail.com",
     Subject: "New Contact Form Submit - portfolio-page",
     Body:
-      "Name: " +
+      "Diese Nachricht kommt von deiner Github Portfolio Page <br><br> Name: " +
       document.getElementById("Name").value +
       "<br> Email: " +
       document.getElementById("Email").value +
@@ -73,8 +54,6 @@ function sendEmail() {
     })
     .catch((error) => console.location - error("Error!", error.message));
 }
-
-// scroll animations
 
 // about column timeline
 const observer = new IntersectionObserver((entries) => {
