@@ -21,40 +21,6 @@ function closemenu() {
   sidemenu.style.right = "-200px";
 }
 
-// contact form
-// https://www.youtube.com/watch?v=sGQSz22U8VM
-// https://smtpjs.com/
-// Email API: https://app.elasticemail.com/api/settings
-
-// import { MAILTOKEN } from "./API_keys.js";
-
-const form = document.forms["submit-to-mail"];
-const msg = document.getElementById("msg");
-
-function sendEmail() {
-  Email.send({
-    SecureToken: "c774c0dc-7d20-41ab-bd7d-fad73add28ae",
-    To: "romanroth44@gmail.com",
-    From: "romanroth44@gmail.com",
-    Subject: "New Contact Form Submit - portfolio-page",
-    Body:
-      "Diese Nachricht kommt von deiner Github Portfolio Page <br><br> Name: " +
-      document.getElementById("Name").value +
-      "<br> Email: " +
-      document.getElementById("Email").value +
-      "<br> Message:<br>" +
-      document.getElementById("Message").value,
-  })
-    .then((response) => {
-      msg.innerHTML = "Message sent successfully";
-      setTimeout(function () {
-        msg.innerHTML = "";
-      }, 5000);
-      form.reset();
-    })
-    .catch((error) => console.location - error("Error!", error.message));
-}
-
 // about column timeline
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
